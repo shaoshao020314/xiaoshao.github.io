@@ -26,10 +26,12 @@
   /* font-style: italic; */
   color: $gray;
   padding-right: 2px;
-  border-right: 1px black solid;
+  border-right: 1px $lightGray solid;
 }
 
 .postTitle {
+  float: left;
+  clear: right;
   font-family: $helveticaNeue;
   font-weight: bold;
   color: $darkerGray;
@@ -42,8 +44,10 @@
 }
 
 .thumbnailImg {
+  float: left;
   max-height:25px;
   margin-left: 5px;
+  clear: right;
 }
 
 .hoverLink {

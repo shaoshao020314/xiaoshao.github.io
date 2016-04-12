@@ -10,14 +10,16 @@ permalink: /archive/
 
 			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
 	  		<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
-      	<div class="postTitle" style="float:left">{{ post.title }}</div>
+
 
       	{% if post.image %}
+      		<div class="postTitle" style="clear:none">{{ post.title }}</div>
 					<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" class="thumbnailImg">
+				{% else %}
+					<div class="postTitle">{{ post.title }}</div>
 				{% endif %}
 
       </a>
-      <div style="clear:both"></div>
     </article>
   {% endfor %}
 </div>
