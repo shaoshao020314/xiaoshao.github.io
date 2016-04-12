@@ -23,9 +23,9 @@
 
 .postDate {
   float: left;
-  /* font-style: italic; */
+  clear: left;
   color: $gray;
-  padding-right: 2px;
+  padding-right: 3px;
   border-right: 1px $lightGray solid;
 }
 
@@ -35,7 +35,7 @@
   font-family: $helveticaNeue;
   font-weight: bold;
   color: $darkerGray;
-  padding-left: 2px;
+  padding-left: 3px;
 }
 
 .regularImg {
@@ -44,10 +44,8 @@
 }
 
 .thumbnailImg {
-  float: left;
   max-height:25px;
-  margin-left: 5px;
-  clear: right;
+  margin-left: 7px;
 }
 
 .hoverLink {
