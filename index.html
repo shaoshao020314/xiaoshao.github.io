@@ -12,7 +12,10 @@ layout: default
       </a>
 
       <div class="entry">
-				<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" style="max-width:500px; max-height:300">
+      	{% if post.image %}
+					<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" style="max-width:500px; max-height:300">
+				{% endif %}
+
         {{ post.excerpt }}
       </div>
 

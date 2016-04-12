@@ -9,6 +9,10 @@ layout: default
 	</div>
 
   <div class="entry">
+		{% if page.image %}
+			<img src="{{ site.baseurl }}/images/{{ page.image }}" alt="{{ page.title }}" style="max-width:500px; max-height:300">
+		{% endif %}
+
     {{ content }}
   </div>
 
