@@ -3,10 +3,8 @@ layout: post
 title: Natsume's Book of Friends (夏目友人帳)
 ---
 
-Natsume Yuujinchou is a slow-paced slice-of-life story that follows Natsume Takashi, a highschool student that can see youkai, Japanese spirits
+Natsume Yuujinchou is a slow-paced slice-of-life story that follows Natsume Takashi, a highschool student that can see youkai, Japanese spirits.
 Because of this unusual power and a magical book he inherited from his grandmother, Natsume is constantly finding himself caught up in the youkai's affairs; running from the evil spirits and helping the good ones, all while trying to keep his ability a secret.
-
-!
 
 The show takes place in a rural suburb, surrounded by nature and rooted in Shinto traditions; the music uses a lot of string and woodwind, so it feels very folksy; the color palette is a muted pastel, and the story pacing is on the slower end, so putting all of those things together, the show feels very laidback and comfortable, but at the same time, it evokes a bittersweet sense of nostalgia or wistfulness IN ITS TONE.
 
