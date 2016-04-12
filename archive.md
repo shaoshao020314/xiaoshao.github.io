@@ -9,7 +9,7 @@ permalink: /archive/
     <article class="post">
 
 			<a href="{{ site.baseurl }}{{ post.url }}">
-	  		<div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
+	  		<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
       	<div class="postTitle">{{ post.title }}</div>
       </a>
     </article>
