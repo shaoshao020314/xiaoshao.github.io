@@ -8,7 +8,7 @@ permalink: /archive/
   {% for post in site.posts %}
     <article class="post">
 
-			<a href="{{ site.baseurl }}{{ post.url }}">
+			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
 	  		<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
       	<div class="postTitle" style="float:left">{{ post.title }}</div>
 

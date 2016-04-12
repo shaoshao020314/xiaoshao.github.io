@@ -23,15 +23,17 @@
 
 .postDate {
   float: left;
-  font-style: italic;
+  /* font-style: italic; */
   color: $gray;
-  margin-right: 5px;
+  padding-right: 2px;
+  border-right: 1px black solid;
 }
 
 .postTitle {
   font-family: $helveticaNeue;
   font-weight: bold;
   color: $darkerGray;
+  padding-left: 2px;
 }
 
 .regularImg {
@@ -44,6 +46,14 @@
   margin-left: 5px;
 }
 
+.hoverLink {
+  color: inherit !important;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
+  }
+}
 
 
 /**************/

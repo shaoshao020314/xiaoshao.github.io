@@ -6,7 +6,7 @@ layout: default
 	{% for post in site.posts %}
 		<article class="post">
 
-			<a href="{{ site.baseurl }}{{ post.url }}">
+			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
 				<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
 				<div class="postTitle">{{ post.title }}</div>
 
@@ -15,9 +15,10 @@ layout: default
 						<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" class="regularImg">
 					{% endif %}
 
-					{{ post.excerpt }}
+					<p>
+						{{ post.excerpt | remove: '<p>' | remove: '</p>' }}..
+					</p>
 				</div>
-				...
 			</a>
 <!--  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">READ MORE</a> -->
 		</article>
