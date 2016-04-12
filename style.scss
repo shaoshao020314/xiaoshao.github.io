@@ -13,10 +13,10 @@
 /* MINE */
 /********/
 
-.postTitle {
-  float: left;
+.pageTitle {
   font-family: $helveticaNeue;
   font-weight: bold;
+  font-size: 20px;
   color: $darkerGray;
 }
 
@@ -24,8 +24,17 @@
   float: left;
   font-style: italic;
   color: $gray;
-  margin: 0 5px;
+  margin: 0 0 0 5px;
 }
+
+.postTitle {
+  float: left;
+  font-family: $helveticaNeue;
+  font-weight: bold;
+  font-size: 20px;
+  color: $darkerGray;
+}
+
 
 
 /**************/
