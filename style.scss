@@ -34,6 +34,16 @@
   color: $darkerGray;
 }
 
+.regularImg {
+  max-width:720px;
+  max-height:250px;
+}
+
+.thumbnailImg {
+  max-height:25px;
+  margin-left: 5px;
+}
+
 
 
 /**************/

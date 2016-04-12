@@ -3,23 +3,23 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+	{% for post in site.posts %}
+		<article class="post">
 
 			<a href="{{ site.baseurl }}{{ post.url }}">
-	  		<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
-      	<div class="postTitle">{{ post.title }}</div>
-      </a>
+				<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
+				<div class="postTitle">{{ post.title }}</div>
 
-      <div class="entry">
-      	{% if post.image %}
-					<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" style="max-width:500px; max-height:300px">
-				{% endif %}
+				<div class="entry">
+					{% if post.image %}
+						<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" class="regularImg">
+					{% endif %}
 
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">READ MORE...</a>
-    </article>
-  {% endfor %}
+					{{ post.excerpt }}
+				</div>
+				...
+			</a>
+<!--  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">READ MORE</a> -->
+		</article>
+	{% endfor %}
 </div>
