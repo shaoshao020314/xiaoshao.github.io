@@ -9,6 +9,24 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+/********/
+/* MINE */
+/********/
+
+.postTitle {
+  float: left;
+  font-family: $helveticaNeue;
+  font-weight: bold;
+  color: $darkerGray;
+}
+
+.postDate {
+  font-style: italic;
+  color: $gray;
+  margin-left: 5px;
+}
+
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -35,11 +53,10 @@ h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
   font-weight: bold;
 
-/*
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-*/
+
 
   @include mobile {
     line-height: 1.4;
