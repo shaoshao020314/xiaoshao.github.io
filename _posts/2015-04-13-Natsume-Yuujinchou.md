@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Natsume Yuujinchou (夏目友人帳)
+image: natsume-yuujinchou.jpg
 ---
 
 Natsume Yuujinchou is a slow-paced slice-of-life story that follows Natsume Takashi, a highschool student that can see youkai, Japanese spirits.
@@ -18,7 +19,7 @@ Natsume's kindness is also a reflection of his anxieties, and how years of bully
 In this way, Takashi is also put into direct contrast with his grandmother, who dealt with isolation by pushing people away and forcing youkai into submission, but even she had her own roundabout, awkward way of showing kindness at times.
 
 Natsume is a well-rounded character; as likeable as he is, he still has flaws that he's aware of and working through.
-Most of the other characters, however, are largely one-dimensional because so much of their development is shown through their relationships with Natsume himself.
+Most of the other characters, however, are largely one-dimensional because so much of their development is only shown through their relationships with Natsume himself.
 But even if you wish your favorite side-characters showed up more often, this works really well in centering the series around Natsume and emphasizing his personal development.
 
 The individual episodes themselves vary a lot in quality.
