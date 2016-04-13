@@ -40,7 +40,7 @@ layout: default
       {% for rec in page.recs %}
         <li>
         {% assign found false %}
-        {% assign modName rec | replace ' ', '_' %}
+        {% assign modName rec | replace ' ', '-' %}
 
         {% for file in site.static_files %}
           {% assign splitPath file.path | remove '.md' | split: '-' %}
