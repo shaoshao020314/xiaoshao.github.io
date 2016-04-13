@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Natsume Yuujinchou (夏目友人帳)
-image: natsume-yuujinchou.jpg
+title:  Natsume Yuujinchou (夏目友人帳)
+image:  natsume-yuujinchou.jpg
+mal:   4081
+anidb:  5787
 ---
 
 Natsume Yuujinchou is a slow-paced, slice-of-life story that follows Natsume Takashi, a highschool student that can see youkai, Japanese spirits.
