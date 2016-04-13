@@ -35,24 +35,21 @@
   font-weight: bold;
   color: $darkerGray;
   padding-left: 3px;
+  padding-right: 3px;
 }
 
 .entry {
   clear: both;
 }
 
-.margin5 {
-  margin-left: 5px;
-}
-
 .regularImg {
-  max-width:720px;
-  max-height:250px;
+  max-width: 720px;
+  max-height: 250px;
 }
 
 .thumbnailImg {
-  max-height:25px;
-  margin-left: 7px;
+  max-height: 25px;
+  margin-left: 4px;
 }
 
 .iconImg {
