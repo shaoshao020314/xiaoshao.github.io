@@ -8,11 +8,11 @@ layout: default
   	<div class="postTitle">{{ page.title }}</div>
     {% if page.mala %}
       <a href="http://www.myanimelist.net/anime/{{ page.mala }}" class="margin5"><img src="{{ site.baseurl }}/images/mal.png" alt="MyAnimeList" class="iconImg"></a>
-    {% elseif page.malm %}
+    {% elsif page.malm %}
       <a href="http://www.myanimelist.net/manga/{{ page.malm }}" class="margin5"><img src="{{ site.baseurl }}/images/mal.png" alt="MyAnimeList" class="iconImg"></a>
     {% endif %}
-    <a href="https://anidb.net/a{{ page.anidb }}" class="margin5"><img src="{{ site.baseurl }}/images/anidb.png" alt="aniDB" class="iconImg"></a>
     {% if page.anidb %}
+      <a href="https://anidb.net/a{{ page.anidb }}" class="margin5"><img src="{{ site.baseurl }}/images/anidb.png" alt="aniDB" class="iconImg"></a>
     {% endif %}
 	</div>
 
