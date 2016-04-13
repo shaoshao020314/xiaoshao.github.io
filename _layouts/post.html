@@ -7,21 +7,21 @@ layout: default
 	  <div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
   	<div class="postTitle">{{ page.title }}</div>
     {% if page.mala %}
-      <a href="http://www.myanimelist.net/anime/{{ page.mala }}"><img src="{{ site.baseurl }}/images/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg"></a>
+      <a href="http://www.myanimelist.net/anime/{{ page.mala }}"><img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg"></a>
     {% elsif page.malm %}
-      <a href="http://www.myanimelist.net/manga/{{ page.malm }}"><img src="{{ site.baseurl }}/images/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg"></a>
+      <a href="http://www.myanimelist.net/manga/{{ page.malm }}"><img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg"></a>
     {% endif %}
     {% if page.anidb %}
-      <a href="https://anidb.net/a{{ page.anidb }}"><img src="{{ site.baseurl }}/images/anidb.png" alt="aniDB" title="aniDB" class="iconImg"></a>
+      <a href="https://anidb.net/a{{ page.anidb }}"><img src="{{ site.baseurl }}/images/icons/anidb.png" alt="aniDB" title="aniDB" class="iconImg"></a>
     {% endif %}
     {% if page.ann %}
-      <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{ page.ann }}"><img src="{{ site.baseurl }}/images/ann.png" alt="Anime News Network" title="Anime News Network" class="iconImg"></a>
+      <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{ page.ann }}"><img src="{{ site.baseurl }}/images/icons/ann.png" alt="Anime News Network" title="Anime News Network" class="iconImg"></a>
     {% endif %}
 	</div>
 
   <div class="entry">
 		{% if page.image %}
-			<img src="{{ site.baseurl }}/images/{{ page.image }}" alt="{{ page.title }}" class="regularImg">
+			<img src="{{ site.baseurl }}/images/blog-images{{ page.image }}" alt="{{ page.title }}" class="regularImg">
 		{% endif %}
 
     {{ content }}

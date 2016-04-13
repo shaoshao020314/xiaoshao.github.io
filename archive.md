@@ -13,7 +13,7 @@ permalink: /archive/
         <div class="postTitle">{{ post.title }}</div>
 
       	{% if post.image %}
-					<img src="{{ site.baseurl }}/images/{{ post.image }}" alt="{{ post.title }}" class="thumbnailImg">
+					<img src="{{ site.baseurl }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnailImg">
 				{% endif %}
 
       </a>
