@@ -31,7 +31,8 @@ Blending these qualities together, the show feels laidback and comfortable, and 
 
 It's certainly not for everyone, because it *is* on the slower side, and some of the episodes don't stand up well on their own, but that's the worst I can say, because overall, Natsume Yuujinchou is a beautiful series that's definitely worth a watch if you enjoy world-building, slice-of-life, and coming-of-age stories.
 
-If you enjoy Natsume Yuujinchou, try these other series:  
+If you enjoy Natsume Yuujinchou, try these other series:
+
 * Kino no Tabi
 * Mushishi
 * Aria
