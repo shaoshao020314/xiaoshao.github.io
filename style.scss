@@ -24,6 +24,7 @@
 .postDate {
   float: left;
   clear: left;
+  font-size: 18px;
   color: $gray;
   padding-right: 3px;
   border-right: 1px $lightGray solid;
@@ -31,6 +32,7 @@
 
 .postTitle {
   float: left;
+  font-size: 18px;
   font-family: $helveticaNeue;
   font-weight: bold;
   color: $darkerGray;
