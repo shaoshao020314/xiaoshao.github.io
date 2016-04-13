@@ -6,6 +6,7 @@ image:  natsume-yuujinchou.jpg
 mala:   4081
 anidb:  5787
 ann:    9419
+recs:   Aria, Hotarubi no Mori e, Kimi to Boku., Kino no Tabi, Mahou Tsukai ni Taisetsu na Koto (Someday's Dreamers), Mushishi, Non Non Biyori, Otome Youkai Zakuro, Tamayura
 ---
 
 Natsume Yuujinchou is a slow-paced, slice-of-life story that follows Natsume Takashi, a highschool student that can see youkai, Japanese spirits.
@@ -34,15 +35,3 @@ The folk setting is then reinforced with string and woodwind instrumentals, a mu
 Blending these qualities together, the show feels laidback and comfortable, and at the same time, it evokes a bittersweet sense of nostalgia and wistfulness.
 
 It's certainly not for everyone, because it *is* on the slower side, and some of the episodes don't stand up well on their own, but that's the worst I can say, because overall, Natsume Yuujinchou is a beautiful series that's definitely worth a watch if you enjoy world-building, slice-of-life, and coming-of-age stories.
-
-If you enjoy Natsume Yuujinchou, try these other series:
-
-* Aria
-* Hotarubi no Mori e
-* Kimi to Boku.
-* Kino no Tabi
-* Mahou Tsukai ni Taisetsu na Koto (Someday's Dreamers)
-* Mushishi
-* Non Non Biyori
-* Otome Youkai Zakuro
-* Tamayura

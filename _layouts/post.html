@@ -33,6 +33,39 @@ layout: default
 		{% endif %}
 
     {{ content }}
+
+    {% if page.recs %}
+      If you enjoy {{ page.title }}, try these other series:
+      <ul>
+      {% for rec in page.recs %}
+        <li>
+        {% assign found false %}
+        {% assign modName rec | replace ' ', '_' %}
+
+        {% for file in site.static_files %}
+          {% assign splitPath file.path | remove '.md' | split: '-' %}
+          {% assign recPath '' %}
+          {% for part in splitPath offset:3 %}
+            {% assign temp recPath %}
+            {% capture recPath %}{{ temp }}{{ part }}{% endcapture %}
+          {% endfor %}
+
+          {% if recPath == modName %}
+            {% assign found true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if found %}
+          <a href="{{ recPath }}">{{ rec }}</a>
+        {% else %}
+          {{ rec }}
+        {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
   </div>
 
   {% include disqus.html %}
