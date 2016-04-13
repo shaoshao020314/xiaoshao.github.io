@@ -31,11 +31,14 @@
 
 .postTitle {
   float: left;
-  clear: right;
   font-family: $helveticaNeue;
   font-weight: bold;
   color: $darkerGray;
   padding-left: 3px;
+}
+
+.entry {
+  clear: both;
 }
 
 .regularImg {
@@ -49,11 +52,10 @@
 }
 
 .hoverLink {
-  color: inherit !important;
   text-decoration: none;
   cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $blue !important;
   }
 }
 
