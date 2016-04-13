@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Natsume Yuujinchou (夏目友人帳)
+tags:   anime
 image:  natsume-yuujinchou.jpg
 mala:   4081
 anidb:  5787
@@ -36,10 +37,12 @@ It's certainly not for everyone, because it *is* on the slower side, and some of
 
 If you enjoy Natsume Yuujinchou, try these other series:
 
-* Kino no Tabi
-* Mushishi
 * Aria
-* Tamayura
-* Otome Youkai Zakuro
-* Non Non Biyori
+* Hotarubi no Mori e
+* Kimi to Boku.
+* Kino no Tabi
 * Mahou Tsukai ni Taisetsu na Koto (Someday's Dreamers)
+* Mushishi
+* Non Non Biyori
+* Otome Youkai Zakuro
+* Tamayura
