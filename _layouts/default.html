@@ -27,13 +27,19 @@
               <!-- {{ site.description }} -->
 
               {% if site.footer-links.myanimelist %}
-                <a href="http://www.myanimelist.net/profile/{{ site.footer-links.myanimelist }}"><img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" class="iconImg"></a>
-              {% endif %}
-              {% if site.footer-links.email %}
-                <a href="ailto:{{ site.footer-links.email }}"><img src="{{ site.baseurl }}/images/icons/email.png" alt="E-mail" class="iconImg"></a>
+                <a href="http://www.myanimelist.net/profile/{{ site.footer-links.myanimelist }}" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" class="iconImg">
+                </a>
               {% endif %}
               {% if site.footer-links.twitter %}
-                <a href="https://www.twitter.com/{{ site.footer-links.twitter }}"><img src="{{ site.baseurl }}/images/icons/twitter.png" alt="Twitter" class="iconImg"></a>
+                <a href="https://www.twitter.com/{{ site.footer-links.twitter }}" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/twitter.png" alt="Twitter" class="iconImg">
+                </a>
+              {% endif %}
+              {% if site.footer-links.email %}
+                <a href="mailto:{{ site.footer-links.email }}">
+                  <img src="{{ site.baseurl }}/images/icons/email.png" alt="E-mail" class="iconImg">
+                </a>
               {% endif %}
             </p>
           </div>
