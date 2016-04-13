@@ -6,7 +6,16 @@ image:  natsume-yuujinchou.jpg
 mala:   4081
 anidb:  5787
 ann:    9419
-recs:   Aria, Hotarubi no Mori e, Kimi to Boku., Kino no Tabi, Mahou Tsukai ni Taisetsu na Koto (Someday's Dreamers), Mushishi, Non Non Biyori, Otome Youkai Zakuro, Tamayura
+recs:
+- Aria
+- Hotarubi no Mori e
+- Kimi to Boku.
+- Kino no Tabi
+- Mahou Tsukai ni Taisetsu na Koto (Someday's Dreamers)
+- Mushishi
+- Non Non Biyori
+- Otome Youkai Zakuro
+- Tamayura
 ---
 
 Natsume Yuujinchou is a slow-paced, slice-of-life story that follows Natsume Takashi, a highschool student that can see youkai, Japanese spirits.
