@@ -16,7 +16,7 @@ layout: default
 					{% endif %}
 
 					<p>
-{{ post.excerpt | remove: '<p>' | remove: '</p>' }}..
+						{{ post.excerpt | remove: '<p>' | remove: '</p>' | escape | strip_newlines }}..
 					</p>
 				</div>
 			</a>
