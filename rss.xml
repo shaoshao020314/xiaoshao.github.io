@@ -16,7 +16,7 @@ layout: null
             <![CDATA[ <img src="{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
           {% endif %}
           {% if post.excerpt %}
-            <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | xml_escape | strip_newlines }}..</p>
+            <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | xml_escape | strip }}..</p>
           {% else %}
             {{ post.content | xml_escape }}
           {% endif %}
