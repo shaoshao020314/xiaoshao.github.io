@@ -20,6 +20,10 @@ layout: null
           {% else %}
             {{ post.content | xml_escape }}
           {% endif %}
+
+          {% if post.image %}
+            <![CDATA[ <img src="{{ site.url }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
+          {% endif %}
         </description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.url }}</link>

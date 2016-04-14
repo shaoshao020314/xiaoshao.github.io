@@ -20,13 +20,14 @@ layout: null
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.id }}</id>
       <content type="html">
-        {% if post.image %}
-          <![CDATA[ <img src="{{ site.url }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
-        {% endif %}
         {% if post.excerpt %}
           <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | xml_escape | strip_newlines }}..</p>
         {% else %}
           {{ post.content | xml_escape }}
+        {% endif %}
+        
+        {% if post.image %}
+          <![CDATA[ <img src="{{ site.url }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
         {% endif %}
       </content>
     </entry>
