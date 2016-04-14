@@ -39,7 +39,14 @@ layout: default
       <ul>
       {% for rec in page.recs %}
         <li>
+        {% assign found false %}
+        {% assign modName rec | replace ' ', '-' %}
+
+        {% if found %}
+          <a href="{{ rec }}">{{ rec }}</a>
+        {% else %}
           {{ rec }}
+        {% endif %}
         </li>
       {% endfor %}
       </ul>
