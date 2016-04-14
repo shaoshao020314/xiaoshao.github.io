@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  Natsume Yuujinchou (夏目友人帳)
+title:  Natsume Yuujinchou
+fullTitle: Natsume Yuujinchou (夏目友人帳)
 tags:   anime
 image:  natsume-yuujinchou.jpg
 mala:   4081

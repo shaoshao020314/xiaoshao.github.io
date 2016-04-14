@@ -62,7 +62,7 @@
   color: inherit !important;
   text-decoration: none;
   cursor: pointer;
-  &:hover *, &:active * {
+  &:hover, &:hover *, &:active, &:active * {
     color: $blue !important;
   }
 }

@@ -40,20 +40,17 @@ layout: default
       {% for rec in page.recs %}
         <li>
         {% assign found = false %}
-        {% assign modName = rec | replace ' ', '-' %}
-        newtest
 
-        {% for staticFile in site.static_files %}
-          {% assign splitPath = staticFile.path | remove '.md' | split: '-' %}
-          {% assign splitSize = splitPath | size %}
-          {% assign recPath = '' %}
-          {% if splitSize < 3 %}
-            {% continue %}
+        {% for post in site.posts %}
+          {% if post.title == rec %}
+            {% assign recURL = post.url %}
+            {% assign found = true %}
+            {% break %}
           {% endif %}
         {% endfor %}
 
         {% if found %}
-          <a href="{{ rec }}">{{ rec }}</a>
+          <a href="{{ site.baseurl }}{{ recURL }}" class="hoverLink">{{ rec }}</a>
         {% else %}
           {{ rec }}
         {% endif %}
