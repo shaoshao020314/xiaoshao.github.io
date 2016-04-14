@@ -41,9 +41,21 @@ layout: default
         <li>
         {% assign found false %}
         {% assign modName rec | replace ' ', '-' %}
+        {{ modName }}
+
+        {% for staticFile in site.static_files %}
+          {% assign splitPath staticFile.path | remove '.md' | split: '-' %}
+          {% assign recPath '' %}
+          {% for part in splitPath offset:3 %}
+            {% assign temp recPath %}
+            {% capture recPath %}{{ temp }}{{ part }}{% endcapture %}
+          {% endfor %}
+
+          {{ recPath }}
+        {% endfor %}
 
         {% if found %}
-          <a href="{{ rec }}">{{ rec }}</a>
+          <a href="{{ recPath }}">{{ rec }}</a>
         {% else %}
           {{ rec }}
         {% endif %}
