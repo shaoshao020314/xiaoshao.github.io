@@ -6,14 +6,14 @@ layout: null
   <channel>
     <title>{{ site.name | xml_escape }}</title>
     <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url | xml_escape }}</link>
+    <link>{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}</link>
     {% for post in site.posts %}
       {% unless post.link %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>
           {% if post.image %}
-            <![CDATA[ <img src="{{ site.baseurl | xml_escape }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
+            <![CDATA[ <img src="{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
           {% endif %}
           {% if post.excerpt %}
             <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | xml_escape | strip_newlines }}..</p>
@@ -22,8 +22,8 @@ layout: null
           {% endif %}
         </description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url | xml_escape }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url | xml_escape }}{{ post.url }}</guid>
+        <link>{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.url }}</guid>
       </item>
       {% endunless %}
     {% endfor %}
