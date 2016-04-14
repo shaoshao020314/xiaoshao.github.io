@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  Natsume Yuujinchou
-fullTitle: Natsume Yuujinchou (夏目友人帳)
+altTitles:
+- Natsume's Book of Friends
+- 夏目友人帳
 tags:   anime
 image:  natsume-yuujinchou.jpg
 mala:   4081
@@ -12,7 +14,7 @@ recs:
 - Hotarubi no Mori e
 - Kimi to Boku.
 - Kino no Tabi
-- Mahou Tsukai ni Taisetsu na Koto (Someday's Dreamers)
+- Mahou Tsukai ni Taisetsu na Koto
 - Mushishi
 - Non Non Biyori
 - Otome Youkai Zakuro

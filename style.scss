@@ -21,6 +21,12 @@
   margin-bottom: 15px;
 }
 
+.titleContainer:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .postDate {
   float: left;
   clear: left;
@@ -125,7 +131,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 a {
@@ -138,7 +144,7 @@ a {
 }
 
 ul, ol {
-  margin: 15px 0;
+  margin: 5px 0;
   padding-left: 30px;
 }
 

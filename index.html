@@ -7,8 +7,10 @@ layout: default
 		<article class="post">
 
 			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
-				<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
-				<div class="postTitle">{{ post.title }}</div>
+				<div class="titleContainer">
+					<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
+					<div class="postTitle">{{ post.title }}</div>
+				</div>
 
 				<div class="entry">
 					{% if post.image %}
@@ -20,7 +22,6 @@ layout: default
 					</p>
 				</div>
 			</a>
-			<!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">READ MORE</a> -->
 		</article>
 	{% endfor %}
 </div>

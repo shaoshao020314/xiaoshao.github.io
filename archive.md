@@ -8,15 +8,15 @@ permalink: /archive/
   {% for post in site.posts %}
     <article class="post">
 
-			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
+			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink titleContainer">
 	  		<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
         <div class="postTitle">{{ post.title }}</div>
 
       	{% if post.image %}
 					<img src="{{ site.baseurl }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnailImg">
 				{% endif %}
-
       </a>
+
     </article>
   {% endfor %}
 </div>

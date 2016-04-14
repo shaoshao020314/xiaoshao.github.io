@@ -3,9 +3,11 @@ layout: default
 ---
 
 <article class="post">
-  <div class="postTitleAndDate">
+  <div class="titleContainer">
 	  <div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
   	<div class="postTitle">{{ page.title }}</div>
+
+    <!-- SHOW ICON LINKS -->
     {% if page.mala %}
       <a href="http://www.myanimelist.net/anime/{{ page.mala }}" target="_blank">
         <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg">
@@ -25,7 +27,17 @@ layout: default
         <img src="{{ site.baseurl }}/images/icons/ann.png" alt="Anime News Network" title="Anime News Network" class="iconImg">
       </a>
     {% endif %}
+    <!--  END ICON LINKS -->
 	</div>
+
+  <!-- SHOW ALTERNATE TITLES -->
+  {% if page.altTitles %}
+  <div style="font-size: 12px;">
+    {% assign alts = page.altTitles | join: ',&nbsp;' %}
+    Also known as: {{ alts }}
+  </div>
+  {% endif %}
+  <!--  END ALTERNATE TITLES -->
 
   <div class="entry">
 		{% if page.image %}
@@ -34,6 +46,7 @@ layout: default
 
     {{ content }}
 
+    <!-- SHOW RECOMMENDATIONS -->
     {% if page.recs %}
       If you enjoy {{ page.title }}, try these other series:
       <ul>
@@ -50,7 +63,7 @@ layout: default
         {% endfor %}
 
         {% if found %}
-          <a href="{{ site.baseurl }}{{ recURL }}" class="hoverLink">{{ rec }}</a>
+          <a href="{{ site.baseurl }}{{ recURL }}">{{ rec }}</a>
         {% else %}
           {{ rec }}
         {% endif %}
@@ -58,6 +71,7 @@ layout: default
       {% endfor %}
       </ul>
     {% endif %}
+    <!--  END RECOMMENDATIONS -->
 
   </div>
 
