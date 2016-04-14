@@ -3,40 +3,43 @@ layout: default
 ---
 
 <article class="post">
-  <div class="titleContainer">
+  <div class="floatContainer">
 	  <div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
   	<div class="postTitle">{{ page.title }}</div>
 
     <!-- SHOW ICON LINKS -->
-    {% if page.mala %}
-      <a href="http://www.myanimelist.net/anime/{{ page.mala }}" target="_blank">
-        <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg">
-      </a>
-    {% elsif page.malm %}
-      <a href="http://www.myanimelist.net/manga/{{ page.malm }}" target="_blank">
-        <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconImg">
-      </a>
-    {% endif %}
-    {% if page.anidb %}
-      <a href="https://anidb.net/a{{ page.anidb }}" target="_blank">
-        <img src="{{ site.baseurl }}/images/icons/anidb.png" alt="aniDB" title="aniDB" class="iconImg">
-      </a>
-    {% endif %}
-    {% if page.ann %}
-      <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{ page.ann }}" target="_blank">
-        <img src="{{ site.baseurl }}/images/icons/ann.png" alt="Anime News Network" title="Anime News Network" class="iconImg">
-      </a>
-    {% endif %}
+    <div style="float:left">
+      {% if page.mala %}
+        <a href="http://www.myanimelist.net/anime/{{ page.mala }}" target="_blank">
+          <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconSml">
+        </a>
+      {% elsif page.malm %}
+        <a href="http://www.myanimelist.net/manga/{{ page.malm }}" target="_blank">
+          <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconSml">
+        </a>
+      {% endif %}
+      {% if page.anidb %}
+        <a href="https://anidb.net/a{{ page.anidb }}" target="_blank">
+          <img src="{{ site.baseurl }}/images/icons/anidb.png" alt="aniDB" title="aniDB" class="iconSml">
+        </a>
+      {% endif %}
+      {% if page.ann %}
+        <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{ page.ann }}" target="_blank">
+          <img src="{{ site.baseurl }}/images/icons/ann.png" alt="Anime News Network" title="Anime News Network" class="iconSml">
+        </a>
+      {% endif %}
+    </div>
     <!--  END ICON LINKS -->
 	</div>
 
   <!-- SHOW ALTERNATE TITLES -->
   {% if page.altTitles %}
-  <div style="font-size: 12px;">
-    {% assign alts = page.altTitles | join: ',&nbsp;' %}
-    Also known as: {{ alts }}
+  <div style="font-size: 12px; white-space: nowrap; clear:both">
+    {% assign alts = page.altTitles | join: ', <wbr />' %}
+    Also known as: <wbr />{{ alts }}
   </div>
   {% endif %}
+
   <!--  END ALTERNATE TITLES -->
 
   <div class="entry">
