@@ -50,8 +50,7 @@ permalink: /archive/
 	<table>
 	{% for cat in site.categories %}
 		<tr class="hoverLink">
-			<td><a href="{{ site.baseurl }}/cats/{{ cat | first }}">{{ cat | first | capitalize }}</a></td>
-			<td><a href="{{ site.baseurl }}/cats/{{ cat | first }}">{{ cat | last | size }}</a></td>
+			<td><a href="{{ site.baseurl }}/cats/{{ cat | first }}">{{ cat | last | size }} - {{ cat | first | capitalize }}</a></td>
 		</tr>
 	{% endfor %}
 	</table>
@@ -61,8 +60,7 @@ permalink: /archive/
 	<table>
 	{% for tag in site.tags %}
 		<tr class="hoverLink">
-			<td><a href="{{ site.baseurl }}/tags/{{ tag | first }}">{{ tag | first | capitalize }}</a></td>
-			<td><a href="{{ site.baseurl }}/tags/{{ tag | first }}">{{ tag | last | size }}</a></td>
+			<td><a href="{{ site.baseurl }}/tags/{{ tag | first }}">{{ tag | last | size }} - {{ tag | first | capitalize }}</a></td>
 		</tr>
 	{% endfor %}
 	</table>
