@@ -1,14 +1,28 @@
 ---
 layout: post
 title:  Natsume Yuujinchou
-altTitles:
-- Natsume's Book of Friends
-- 夏目友人帳
-tags:   anime
 image:  natsume-yuujinchou.jpg
 mala:   4081
 anidb:  5787
 ann:    9419
+
+categories:
+- anime
+- review
+tags:
+- fantasy
+- drama
+- slice of life
+- episodic
+- teenagers
+- atmosphere
+- characterization
+- melancholy
+- optimistic
+
+altTitles:
+- Natsume's Book of Friends
+- 夏目友人帳
 recs:
 - Aria
 - Hotarubi no Mori e
