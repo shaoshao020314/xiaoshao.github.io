@@ -67,15 +67,10 @@
 }
 
 .filterButton {
-  float: left;
+  display: inline-block;
   font-size: 18px;
-  padding-left:  3px;
-  padding-right: 3px;
+  padding-right: 4px;
   border-right: 1px $lineColor solid;
-}
-
-* > .filterButton:first-child {
-  padding-left: 0;
 }
 
 * > .filterButton:last-child {
