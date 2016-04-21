@@ -44,7 +44,6 @@
   display: inline-block;
   font-size: 18px;
   color: $gray;
-  padding-right: 3px;
 }
 
 .postTitle {
@@ -71,11 +70,11 @@
   font-size: 18px;
   padding-right: 4px;
   border-right: 1px $lineColor solid;
-}
 
-* > .filterButton:last-child {
-  padding-right: 0;
-  border-right: 0;
+  &:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
 }
 
 .regularImg {
@@ -101,8 +100,6 @@
 }
 
 .iconSml {
-  float: left;
-  margin-left: 3px;
   height: 20px;
   border: 2px $imgColor solid;
 
@@ -113,6 +110,7 @@
 
 .hoverLink {
   color: inherit !important;
+
   &:hover, &:hover *, &:active, &:active * {
     color: $hoverColor !important;
   }
@@ -149,7 +147,6 @@ body {
   /* min-width: 540px; */
   max-width: 740px;
   padding: 10px;
-  width: 100%;
   background: $white;
   border: 5px solid $borderColor;
 }
@@ -370,11 +367,11 @@ nav {
 * > .post {
   border-bottom: 1px solid $lightGray;
   margin-bottom: 1em;
-}
 
-* > .post:last-child {
-  border-bottom: none;
-  margin-bottom: 0px;
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
 }
 
 .post {
