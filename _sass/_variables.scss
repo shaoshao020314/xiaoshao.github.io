@@ -1,6 +1,8 @@
 // Colors
 $blue: #4183C4;
 $teal: #1996BE;
+$orange: #fcb95e;
+$purple: #7c7cbf;
 
 // Grays
 $black: #000;
@@ -10,9 +12,10 @@ $gray: #666;
 $lightGray: #ccc;
 $white: #fff;
 
-$linkColor: $teal;
-$lineColor: $lightGray;
-$imgColor: $lightGray;
+$linkColor:   $purple;
+$imgColor:    $purple;
+$lineColor:   $purple;
+$borderColor: $orange;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;

@@ -140,7 +140,7 @@ html {
 }
 
 body {
-	background-color: #7c7cbf;
+	background-color: $purple;
   background-image: url(images/groovin_magic.png);
   background-size: 100%;
   background-position: left top;
@@ -156,7 +156,7 @@ body {
   padding: 0 10px;
   width: 100%;
   background: $white;
-  border: 5px solid $lineColor;
+  border: 5px solid $borderColor;
 }
 
 h1, h2, h3, h4, h5, h6 {
