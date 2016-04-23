@@ -94,6 +94,9 @@ layout: default
 	<div class="entry">
     {% if page.imgDir %}
 			{% assign imgCount = 0 %}
+    	{% assign loopCount = 0 %}
+    	{% assign halfCount = 0 %}
+    	{% assign linkArr = "" | split: "|"  %}
 			{% assign lThumbs = "" %}
 			{% assign rThumbs = "" %}
 			{% assign fullImages = "" %}
@@ -101,32 +104,37 @@ layout: default
       {% for file in site.static_files %}
         {% assign a = file.path | split: page.imgDir | size %}
         {% if a > 1 %}
-        		{% assign isOdd = imgCount | modulo: 2 %}
-
-        		{% if imgCount > 9 %}
-        			{% break %}
-        		{% endif %}
-
-        		{% if imgCount == 0 %}
-        			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='f" | append: imgCount | append: "' class='galleryImg active'>" %}
-						{% else %}
-        			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='f" | append: imgCount | append: "' class='galleryImg'>" %}
-        		{% endif %}
-
-        		{% if isOdd == 0 %}
-        			{% if imgCount == 0 %}
-        				{% assign lThumbs = lThumbs | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='" | append: imgCount | append: "' class='galleryThumb active'>" %}
-        			{% else %}
-        				{% assign lThumbs = lThumbs | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='" | append: imgCount | append: "' class='galleryThumb'>" %}
-        			{% endif %}
-        		{% else %}
-        			{% assign rThumbs = rThumbs | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='" | append: imgCount | append: "' class='galleryThumb'>" %}
-        		{% endif %}
-
-        		{% assign imgCount = imgCount | plus: 1 %}
-        {% endif %}
+    			{% assign linkArr = linkArr | push: file.path %}
+      		{% if imgCount >= 9 %}
+      			{% break %}
+      		{% endif %}
+        	{% assign imgCount = imgCount | plus: 1 %}
+      	{% endif %}
       {% endfor %}
 
+    	{% assign halfCount = imgCount | divided_by: 2 %}
+      {% assign temp = imgCount | modulo: 2 %}
+      {% if temp == 0 %}
+      	{% assign halfCount = halfCount | plus: 1 %}
+      {% endif %}
+
+      {% for link in linkArr %}
+      	{% if forloop.first %}
+    			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='f" | append: loopCount | append: "' class='galleryImg active'>" %}
+    			{% assign temp = "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='" | append: loopCount | append: "' class='galleryThumb active'>" %}
+				{% else %}
+    			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='f" | append: loopCount | append: "' class='galleryImg'>" %}
+    			{% assign temp = "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='" | append: loopCount | append: "' class='galleryThumb'>" %}
+    		{% endif %}
+
+      	{% if loopCount <= halfCount %}
+      		{% assign lThumbs = lThumbs | append: temp %}
+      	{% else %}
+      		{% assign rThumbs = rThumbs | append: temp %}
+      	{% endif %}
+
+      	{% assign loopCount = loopCount | plus: 1 %}
+      {% endfor %}
 
 			<div class="centerContainer gallery">
 				<div class="inlineContainer">
