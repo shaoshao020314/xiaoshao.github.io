@@ -4,13 +4,28 @@ title: Archive
 permalink: /archive/
 ---
 
+<script type="text/javascript">
+	$(function() {
+		$(".filterButton").click(function() {
+			$(".filterButton").removeClass("active");
+			$(".group").removeClass("active");
+
+			var gId = "#" + this.id + "Group";
+
+			$(this).addClass("active");
+			$(gId).addClass("active");
+
+		});
+	});
+</script>
+
 <div class="floatContainer" style="margin-bottom: 20px">
-	<a class="hoverLink filterButton" id="selectedLink" onclick="showOnly(this, 'posts');">Posts</a>
-	<a class="hoverLink filterButton" onclick="showOnly(this, 'categories');">Categories</a>
-	<a class="hoverLink filterButton" onclick="showOnly(this, 'tags');">Tags</a>
+	<a id="posts" class="hoverLink filterButton active">Posts</a>
+	<a id="cats" class="hoverLink filterButton">Categories</a>
+	<a id="tags" class="hoverLink filterButton">Tags</a>
 </div>
 
-<div class="group" id="posts">
+<div class="group active" id="postsGroup">
 	{% for post in site.posts %}
 		<article class="post">
 			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink floatContainer">
@@ -46,7 +61,7 @@ permalink: /archive/
 	{% endfor %}
 </div>
 
-<div class="group" style="display: none;" id="categories">
+<div class="group" id="catsGroup">
 	<table>
 	{% for cat in site.categories %}
 		<tr class="hoverLink">
@@ -56,7 +71,7 @@ permalink: /archive/
 	</table>
 </div>
 
-<div class="group" style="display: none;" id="tags">
+<div class="group" id="tagsGroup">
 	<table>
 	{% for tag in site.tags %}
 		<tr class="hoverLink">
@@ -65,16 +80,3 @@ permalink: /archive/
 	{% endfor %}
 	</table>
 </div>
-
-<script type="text/javascript">
-	function showOnly(element, id) {
-		document.getElementById("selectedLink").id = '';
-		element.id = "selectedLink";
-
-    var groups = document.getElementsByClassName("group");
-    for(var i = 0; i < groups.length; i++) {
-	  	groups[i].style.display = "none";
-		}
-    document.getElementById(id).style.display = "block";
-	}
-</script>

@@ -1,10 +1,12 @@
 ---
 layout: post
+
 title:  Natsume Yuujinchou
-image:  natsume-yuujinchou.jpg
 mala:   4081
 anidb:  5787
 ann:    9419
+
+imgDir: natsume_yuujinchou
 
 categories:
 - anime
@@ -19,7 +21,6 @@ tags:
 - characterization
 - somber
 - optimistic
-
 altTitles:
 - Natsume's Book of Friends
 - 夏目友人帳

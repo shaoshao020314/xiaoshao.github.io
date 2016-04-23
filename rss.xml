@@ -12,9 +12,16 @@ layout: null
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>
-          {% if post.image %}
-            <![CDATA[ <img src="{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}/images/blog-images/{{ post.image }}" alt="{{ post.title }}" class="thumbnail"> ]]>
+          {% if post.imgDir %}
+            {% for file in site.static_files %}
+              {% assign a = file.path | split: post.imgDir | size %}
+              {% if a > 1 %}
+                <![CDATA[ <img src="{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ file.path }}" alt="{{ post.title }}" class="thumbnail"> ]]>
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
+
           {% if post.excerpt %}
             <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | xml_escape | strip }}..</p>
           {% else %}

@@ -2,6 +2,34 @@
 layout: default
 ---
 
+<script type="text/javascript">
+	$(function() {
+		var numImgs = $('.galleryImg').length;
+
+	  $(".galleryImg").click(function() {
+	  	$(".galleryThumb").removeClass("active");
+	    $(".galleryImg").removeClass("active");
+
+	    var newNum = (parseInt(this.id.slice(1)) + 1) % numImgs;
+
+	    var fId = '#f' + newNum;
+	    var tId = '#'  + newNum;
+
+	    $(tId).addClass("active");
+	    $(fId).addClass("active");
+	  });
+
+	  $(".galleryThumb").click(function() {
+	  	$(".galleryThumb").removeClass("active");
+	    $(".galleryImg").removeClass("active");
+
+	    var fId = '#f' + this.id;
+	    $(this).addClass("active");
+	    $(fId).addClass("active");
+	  });
+	});
+</script>
+
 <article class="post">
 	<div class="centerContainer">
 		<div class="floatContainer" style="border-bottom: 1px solid #ccc">
@@ -31,7 +59,7 @@ layout: default
 				{% endif %}
 			</div>
 			<!--  END ICON LINKS -->
-	</div>
+		</div>
 
 		<!-- SHOW ALTERNATE TITLES -->
 		{% if page.altTitles %}
@@ -64,10 +92,53 @@ layout: default
 
 	<!-- SHOW CONTENT -->
 	<div class="entry">
-		{% if page.image %}
-		<div class="centerContainer">
-			<img src="{{ site.baseurl }}/images/blog-images/{{ page.image }}" alt="{{ page.title }}" class="regularImg">
-		</div>
+    {% if page.imgDir %}
+			{% assign imgCount = 0 %}
+			{% assign lThumbs = "" %}
+			{% assign rThumbs = "" %}
+			{% assign fullImages = "" %}
+
+      {% for file in site.static_files %}
+        {% assign a = file.path | split: page.imgDir | size %}
+        {% if a > 1 %}
+        		{% assign isOdd = imgCount | modulo: 2 %}
+
+        		{% if imgCount > 9 %}
+        			{% break %}
+        		{% endif %}
+
+        		{% if imgCount == 0 %}
+        			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='f" | append: imgCount | append: "' class='galleryImg active'>" %}
+						{% else %}
+        			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='f" | append: imgCount | append: "' class='galleryImg'>" %}
+        		{% endif %}
+
+        		{% if isOdd == 0 %}
+        			{% if imgCount == 0 %}
+        				{% assign lThumbs = lThumbs | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='" | append: imgCount | append: "' class='galleryThumb active'>" %}
+        			{% else %}
+        				{% assign lThumbs = lThumbs | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='" | append: imgCount | append: "' class='galleryThumb'>" %}
+        			{% endif %}
+        		{% else %}
+        			{% assign rThumbs = rThumbs | append: "<img src='" | append: site.baseurl | append: file.path | append: "' alt='" | append: page.title | append: "' id='" | append: imgCount | append: "' class='galleryThumb'>" %}
+        		{% endif %}
+
+        		{% assign imgCount = imgCount | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+
+
+			<div class="centerContainer gallery">
+				<div class="inlineContainer">
+					{{ lThumbs }}
+				</div>
+				<div class="inlineContainer">
+					{{ fullImages }}
+				</div>
+				<div class="inlineContainer">
+					{{ rThumbs }}
+				</div>
+			</div>
 		{% else %}
 			<br/>
 		{% endif %}
