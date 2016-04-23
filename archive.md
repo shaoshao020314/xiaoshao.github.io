@@ -14,7 +14,6 @@ permalink: /archive/
 
 			$(this).addClass("active");
 			$(gId).addClass("active");
-
 		});
 	});
 </script>
