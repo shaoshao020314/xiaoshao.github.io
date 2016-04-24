@@ -269,6 +269,22 @@ footer {
 /* MINE */
 /********/
 
+.prevPost {
+  float: left;
+
+  @include mobile {
+    float: none;
+  }
+}
+
+.nextPost {
+  float: right;
+
+  @include mobile {
+    float: none;
+  }
+}
+
 .smallText {
   font-size: 12px;
   white-space: nowrap;
