@@ -3,8 +3,16 @@ layout: default
 ---
 
 <div id="posts">
+	{% assign postCount = 0 %}
 	{% for post in site.posts %}
 		<article class="post">
+		{% if postCount > 4 %}
+			<a href="{{ site.baseurl }}/archive.html">
+				<span class="read-more">Check the archive for older posts</span> &rarr;
+			</a>
+			{% break %}
+		{% endif %}
+		{% assign postCount = postCount | plus: 1 %}
 
 			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
 				<div class="floatContainer">

@@ -7,8 +7,13 @@ layout: null
     <title>{{ site.name | xml_escape }}</title>
     <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
     <link>{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}</link>
+    {% assign postCount = 0 %}
     {% for post in site.posts %}
-      {% unless post.link %}
+      {% if postCount > 4 %}
+        {% break %}
+      {% endif %}
+      {% assign postCount = postCount | plus: 1 %}
+
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>
@@ -32,7 +37,6 @@ layout: null
         <link>{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.url }}</guid>
       </item>
-      {% endunless %}
     {% endfor %}
   </channel>
 </rss>

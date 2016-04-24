@@ -13,7 +13,13 @@ layout: null
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
+  {% assign postCount = 0 %}
   {% for post in site.posts %}
+    {% if postCount > 4 %}
+      {% break %}
+    {% endif %}
+    {% assign postCount = postCount | plus: 1 %}
+
     <entry>
       <title>{{ post.title }}</title>
       <link href="{{ site.url | xml_escape }}{{ site.baseurl | xml_escape }}{{ post.url }}" />

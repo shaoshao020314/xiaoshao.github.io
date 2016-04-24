@@ -32,6 +32,7 @@ layout: default
 
 <article class="post">
 	<div class="centerContainer">
+		{% comment %}
 		{% for post in site.posts %}
 			{% if nextPost %}
 				{% if post.title == page.title %}
@@ -53,6 +54,7 @@ layout: default
 
 			{% assign nextPost = post %}
 		{% endfor %}
+		{% endcomment %}
 
 		<div style="border-bottom: 1px solid #ccc">
 			<div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
