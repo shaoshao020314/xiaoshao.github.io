@@ -70,3 +70,4 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - atom.xml

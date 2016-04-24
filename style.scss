@@ -375,7 +375,11 @@ footer {
   }
 }
 
-
+a * {
+  &:hover, &:active {
+    border-color: $hoverColor !important;
+  }
+}
 
 .group {
   display: none;
@@ -401,7 +405,6 @@ footer {
   }
 }
 
-
 .thumbnail {
   float: left;
   max-height: 25px;
@@ -412,19 +415,11 @@ footer {
 .iconLrg {
   height: 25px;
   border: 2px $imgColor solid;
-
-  &:hover, &:active {
-    border: none;
-  }
 }
 
 .iconSml {
   height: 20px;
   border: 2px $imgColor solid;
-
-  &:hover, &:active {
-    border: none;
-  }
 }
 
 .hoverLink {

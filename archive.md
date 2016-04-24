@@ -62,20 +62,35 @@ permalink: /archive/
 
 <div class="group" id="catsGroup">
 	<table>
-	{% for cat in site.categories %}
-		<tr class="hoverLink">
-			<td><a href="{{ site.baseurl }}/cats/{{ cat | first }}">{{ cat | last | size }} - {{ cat | first | capitalize }}</a></td>
-		</tr>
-	{% endfor %}
+		{% capture cats %}
+			{% for cat in site.categories %}
+				{{ cat | first | capitalize }}^{{ cat | last | size }}
+				{% unless forloop.last %},{% endunless %}
+			{% endfor %}
+		{% endcapture %}
+		{% assign cats = cats | split: "," | sort %}
+		{% for cat in cats %}
+			{% assign temp = cat | split: '^' %}
+			{% assign catName = temp | first %}
+			{% assign catSize = temp | last %}
+			<tr class="hoverLink">
+				<td><a href="{{ site.baseurl }}/cats/{{ catName }}">{{ catSize }} - {{ catName }}</a></td>
+			</tr>
+		{% endfor %}
 	</table>
 </div>
 
 <div class="group" id="tagsGroup">
 	<table>
-	{% for tag in site.tags %}
-		<tr class="hoverLink">
-			<td><a href="{{ site.baseurl }}/tags/{{ tag | first }}">{{ tag | last | size }} - {{ tag | first | capitalize }}</a></td>
-		</tr>
-	{% endfor %}
+		{% capture tags %}{% for tag in site.tags %}{{ tag | first | capitalize }}^{{ tag | last | size }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+		{% assign tags = tags | split: "," | sort %}
+		{% for tag in tags %}
+			{% assign temp = tag | split: '^' %}
+			{% assign tagName = temp | first %}
+			{% assign tagSize = temp | last %}
+			<tr class="hoverLink">
+				<td><a href="{{ site.baseurl }}/tags/{{ tagName }}">{{ tagSize }} - {{ tagName }}</a></td>
+			</tr>
+		{% endfor %}
 	</table>
 </div>
