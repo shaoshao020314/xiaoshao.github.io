@@ -189,32 +189,36 @@ layout: default
 	<!--  END CONTENT -->
 </div>
 
-{% if false %}
-	<div class="centerContainer">
-		{% for post in site.posts %}
-			{% if nextPost %}
-				{% if post.title == page.title %}
-					<a href="{{ site.baseurl }}{{ nextPost.url }}">
-						<div class="nextPost smallText">
-							Next Post<br/>
-							{{ nextPost.title }}
-						</div>
+<!-- SHOW PREV/NEXT -->
+<div class="emptyContainer">
+	{% for post in site.posts %}
+		{% if nextPost %}
+			{% if nextPost.title == page.title %}
+				<div class="smallContainer leftSide">
+					<a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
+						&larr; <span class="smallText italic">Prev Post</span>
+						<br/>
+						<span class="smallText breakWord">{{ post.title }}</span>
 					</a>
-				{% else if nextPost.title == page.title %}
-					<a href="{{ site.baseurl }}{{ post.url }}">
-						<div class="prevPost smallText">
-							Prev Post<br/>
-							{{ post.title }}
-						</div>
+				</div>
+			{% else if post.title == page.title %}
+				<div class="smallContainer rightSide">
+					<a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
+						<span class="smallText italic">Next Post</span> &rarr;
+						<br/>
+						<span class="smallText breakWord">{{ nextPost.title }}</span>
 					</a>
-				{% endif %}
+				</div>
 			{% endif %}
+		{% endif %}
 
-			{% assign nextPost = post %}
-		{% endfor %}
-	</div>
+		{% assign nextPost = post %}
+	{% endfor %}
+</div>
+<!--  END PREV/NEXT -->
+
+{% if true %}
+	<!-- SHOW COMMENTS -->
+	{% include disqus.html %}
+	<!--  END COMMENTS -->
 {% endif %}
-
-<!-- SHOW COMMENTS -->
-{% include disqus.html %}
-<!--  END COMMENTS -->

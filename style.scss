@@ -25,11 +25,41 @@ body {
 
 .container {
   margin: 10px auto;
-  /* min-width: 540px; */
   max-width: 740px;
   padding: 10px;
   background: $white;
   border: 5px solid $borderColor;
+}
+
+.emptyContainer {
+  margin: 0 auto;
+  max-width: 740px;
+}
+
+.smallContainer {
+  width: 49%;
+  background: $white;
+  border: 5px solid $borderColor;
+  margin-bottom: 10px;
+}
+
+.blockLink {
+  display: block;
+  padding: 10px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.leftSide {
+  float: left;
+  text-align: left;
+}
+
+.rightSide {
+  float: right;
+  text-align: right;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -275,24 +305,12 @@ footer {
 /* MINE */
 /********/
 
-.prevPost {
-  float: left;
-
-  @include mobile {
-    float: none;
-  }
-}
-
-.nextPost {
-  float: right;
-
-  @include mobile {
-    float: none;
-  }
-}
-
 .smallText {
   font-size: 12px;
+}
+
+.breakWord {
+  word-wrap: break-word;
 }
 
 .centerContainer {
