@@ -50,19 +50,16 @@
           </div>
 
           <nav>
-            <!-- <a href="{{ site.baseurl }}/"><span class="bl">Blog</span></a> -->
-            <a href="{{ site.baseurl }}/about"><span class="bl">About</span></a>
-            <a href="{{ site.baseurl }}/archive"><span class="bl">Archive</span></a>
+            <div class="bl"><a class="hoverLink" href="{{ site.baseurl }}/about">About</a></div>
+            <div class="bl"><a class="hoverLink" href="{{ site.baseurl }}/archive">Archive</a></div>
           </nav>
         </header>
       </div>
-
-      <div id="main" role="main">
-        {{ content }}
-      </div>
     </div>
 
-    {% comment %}
+    {{ content }}
+
+    {% if false %}
       <div class="wrapper-footer">
         <div class="container">
           <footer class="footer">
@@ -70,7 +67,7 @@
           </footer>
         </div>
       </div>
-    {% endcomment %}
+    {% endif %}
 
     {% include analytics.html %}
   </body>

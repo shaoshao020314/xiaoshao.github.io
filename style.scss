@@ -145,11 +145,11 @@ img {
 /*********************/
 
 .wrapper-masthead {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .masthead {
-  border-bottom: 1px solid $lightGray;
+  /* border-bottom: 1px solid $lightGray; */
 
   @include mobile {
     text-align: center;
@@ -186,6 +186,7 @@ img {
 h1.site-name {
   color: $darkGray;
   font-weight: 300;
+  letter-spacing: 0.5px
 }
 
 .site-description {
@@ -211,18 +212,23 @@ nav {
     font-size: 16px;
   }
 
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
+  .bl {
+    padding-left: 3px;
+    border-left: 5px $lineColor solid;
+    margin-bottom: 5px;
 
     @include mobile {
+      display: inline-block;
       margin: 0 10px;
-      /* color: $linkColor; */
     }
   }
+
+  a {
+    color: $darkGray;
+    letter-spacing: 0.5px;
+  }
+
+
 }
 
 * > .post {
@@ -287,7 +293,6 @@ footer {
 
 .smallText {
   font-size: 12px;
-  white-space: nowrap;
 }
 
 .centerContainer {
@@ -298,14 +303,16 @@ footer {
   display: inline-block;
 }
 
-.gallery > * {
-  vertical-align: top;
+.gallery > .inlineContainer {
+  display: inline-block;
+
+  @include mobile {
+    display: block;
+  }
 }
 
-.floatContainer:after {
-  content: '';
-  display: block;
-  clear: both;
+.gallery > * {
+  vertical-align: top;
 }
 
 .pageTitle {
@@ -330,11 +337,6 @@ footer {
   color: $darkerGray;
   padding-left: 3px;
   border-left: 1px $lineColor solid;
-}
-
-.bl {
-  padding-left: 3px;
-  border-left: 5px $lineColor solid;
 }
 
 .entry {

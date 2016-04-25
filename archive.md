@@ -18,7 +18,7 @@ permalink: /archive/
 	});
 </script>
 
-<div class="floatContainer" style="margin-bottom: 20px">
+<div class="" style="margin-bottom: 20px">
 	<a id="posts" class="hoverLink filterButton active">Posts</a>
 	<a id="cats" class="hoverLink filterButton">Categories</a>
 	<a id="tags" class="hoverLink filterButton">Tags</a>
@@ -27,7 +27,7 @@ permalink: /archive/
 <div class="group active" id="postsGroup">
 	{% for post in site.posts %}
 		<article class="post">
-			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink floatContainer">
+			<a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
 				<div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
 				<div class="postTitle">{{ post.title }}</div>
 
@@ -38,7 +38,7 @@ permalink: /archive/
 				{% endif %}
 
 				{% if post.categories %}
-					<div class="floatContainer smallText" style="clear: both">
+					<div class="smallText" style="clear: both">
 						{% for cat in post.categories %}
 							<wbr><a href="{{ site.baseurl}}/cats/{{ cat }}">{{ cat | capitalize }}</a>
 							{% unless forloop.last %} - {% endunless %}
@@ -47,7 +47,7 @@ permalink: /archive/
 				{% endif %}
 
 				{% if post.tags %}
-					<div class="floatContainer smallText" style="clear: both">
+					<div class="smallText" style="clear: both">
 						{% for tag in post.tags %}
 							<wbr><a href="{{ site.baseurl}}/tags/{{ tag }}">{{ tag | capitalize }}</a>
 							{% unless forloop.last %} - {% endunless %}

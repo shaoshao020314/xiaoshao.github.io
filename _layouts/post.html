@@ -30,32 +30,8 @@ layout: default
 	});
 </script>
 
-<article class="post">
+<div class="container">
 	<div class="centerContainer">
-		{% comment %}
-		{% for post in site.posts %}
-			{% if nextPost %}
-				{% if post.title == page.title %}
-					<a href="{{ site.baseurl }}{{ nextPost.url }}">
-						<div class="nextPost smallText">
-							Next Post<br/>
-							{{ nextPost.title }}
-						</div>
-					</a>
-				{% else if nextPost.title == page.title %}
-					<a href="{{ site.baseurl }}{{ post.url }}">
-						<div class="prevPost smallText">
-							Prev Post<br/>
-							{{ post.title }}
-						</div>
-					</a>
-				{% endif %}
-			{% endif %}
-
-			{% assign nextPost = post %}
-		{% endfor %}
-		{% endcomment %}
-
 		<div style="border-bottom: 1px solid #ccc">
 			<div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
 			<div class="postTitle">{{ page.title }}</div>
@@ -95,7 +71,7 @@ layout: default
 
 		<!-- SHOW CATS/TAGS -->
 		{% if page.categories %}
-			<div class="floatContainer smallText">
+			<div class="smallText">
 				{% for cat in page.categories %}
 					<wbr><a href="{{ site.baseurl}}/cats/{{ cat }}">{{ cat | capitalize }}</a>
 					{% unless forloop.last %} - {% endunless %}
@@ -104,7 +80,7 @@ layout: default
 		{% endif %}
 
 		{% if page.tags %}
-			<div class="floatContainer smallText">
+			<div class="smallText">
 				{% for tag in page.tags %}
 					<wbr><a href="{{ site.baseurl}}/tags/{{ tag }}">{{ tag | capitalize }}</a>
 					{% unless forloop.last %} - {% endunless %}
@@ -211,8 +187,34 @@ layout: default
 		<!--  END RECOMMENDATIONS -->
 	</div>
 	<!--  END CONTENT -->
+</div>
 
-	<!-- SHOW COMMENTS -->
-	{% include disqus.html %}
-	<!--  END COMMENTS -->
-</article>
+{% if false %}
+	<div class="centerContainer">
+		{% for post in site.posts %}
+			{% if nextPost %}
+				{% if post.title == page.title %}
+					<a href="{{ site.baseurl }}{{ nextPost.url }}">
+						<div class="nextPost smallText">
+							Next Post<br/>
+							{{ nextPost.title }}
+						</div>
+					</a>
+				{% else if nextPost.title == page.title %}
+					<a href="{{ site.baseurl }}{{ post.url }}">
+						<div class="prevPost smallText">
+							Prev Post<br/>
+							{{ post.title }}
+						</div>
+					</a>
+				{% endif %}
+			{% endif %}
+
+			{% assign nextPost = post %}
+		{% endfor %}
+	</div>
+{% endif %}
+
+<!-- SHOW COMMENTS -->
+{% include disqus.html %}
+<!--  END COMMENTS -->
