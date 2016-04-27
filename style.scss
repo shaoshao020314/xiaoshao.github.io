@@ -29,11 +29,13 @@ body {
   padding: 10px;
   background: $white;
   border: 5px solid $borderColor;
+  clear: both;
 }
 
 .emptyContainer {
   margin: 0 auto;
   max-width: 740px;
+  clear: both;
 }
 
 .smallContainer {
@@ -245,7 +247,7 @@ nav {
   .bl {
     padding-left: 3px;
     border-left: 5px $lineColor solid;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 
     @include mobile {
       display: inline-block;
