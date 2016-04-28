@@ -13,6 +13,7 @@
     <link rel="alternate" type="application/rss+xml"  title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <!-- <link rel="alternate" type="application/atom+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/atom.xml" /> -->
     <script src="{{ site.baseurl }}/js/jquery-2.2.3.min.js"></script>
+    {% include analytics.html %}
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -71,7 +72,5 @@
       </div>
       <!--  END FOOTER -->
     {% endif %}
-
-    {% include analytics.html %}
   </body>
 </html>
