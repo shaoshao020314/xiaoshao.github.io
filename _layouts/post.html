@@ -4,224 +4,224 @@ comments: true
 ---
 
 <script type="text/javascript">
-	$(function() {
-		var numImgs = $('.galleryImg').length;
+  $(function() {
+    var numImgs = $('.galleryImg').length;
 
-	  $(".galleryImg").click(function() {
-	  	$(".galleryThumb").removeClass("active");
-	    $(".galleryImg").removeClass("active");
+    $(".galleryImg").click(function() {
+      $(".galleryThumb").removeClass("active");
+      $(".galleryImg").removeClass("active");
 
-	    var newNum = (parseInt(this.id.slice(1)) + 1) % numImgs;
+      var newNum = (parseInt(this.id.slice(1)) + 1) % numImgs;
 
-	    var fId = '#f' + newNum;
-	    var tId = '#'  + newNum;
+      var fId = '#f' + newNum;
+      var tId = '#'  + newNum;
 
-	    $(tId).addClass("active");
-	    $(fId).addClass("active");
-	  });
+      $(tId).addClass("active");
+      $(fId).addClass("active");
+    });
 
-	  $(".galleryThumb").click(function() {
-	  	$(".galleryThumb").removeClass("active");
-	    $(".galleryImg").removeClass("active");
+    $(".galleryThumb").click(function() {
+      $(".galleryThumb").removeClass("active");
+      $(".galleryImg").removeClass("active");
 
-	    var fId = '#f' + this.id;
-	    $(this).addClass("active");
-	    $(fId).addClass("active");
-	  });
-	});
+      var fId = '#f' + this.id;
+      $(this).addClass("active");
+      $(fId).addClass("active");
+    });
+  });
 </script>
 
 <div class="container">
-	<div class="centerContainer">
-		<div style="border-bottom: 1px solid #ccc">
-			<div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
-			<div class="postTitle">{{ page.title }}</div>
+  <div class="centerContainer">
+    <div style="border-bottom: 1px solid #ccc">
+      <div class="postDate">{{ page.date | date: "%Y.%m.%d" }}</div>
+      <div class="postTitle">{{ page.title }}</div>
 
-			<!-- SHOW ICON LINKS -->
-			<div style="display:inline-block">
-				{% if page.mala %}
-					<a href="http://www.myanimelist.net/anime/{{ page.mala }}" target="_blank">
-						<img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconSml">
-					</a>
-				{% elsif page.malm %}
-					<a href="http://www.myanimelist.net/manga/{{ page.malm }}" target="_blank">
-						<img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconSml">
-					</a>
-				{% endif %}
-				{% if page.ann %}
-					<a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{ page.ann }}" target="_blank">
-						<img src="{{ site.baseurl }}/images/icons/ann.png" alt="Anime News Network" title="Anime News Network" class="iconSml">
-					</a>
-				{% endif %}
-				{% if page.anidb %}
-					<a href="https://anidb.net/a{{ page.anidb }}" target="_blank">
-						<img src="{{ site.baseurl }}/images/icons/anidb.png" alt="aniDB" title="aniDB" class="iconSml">
-					</a>
-				{% endif %}
-			</div>
-			<!--  END ICON LINKS -->
-		</div>
+      <!-- SHOW ICON LINKS -->
+      <div style="display:inline-block">
+        {% if page.mala %}
+          <a href="http://www.myanimelist.net/anime/{{ page.mala }}" target="_blank">
+            <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconSml">
+          </a>
+        {% elsif page.malm %}
+          <a href="http://www.myanimelist.net/manga/{{ page.malm }}" target="_blank">
+            <img src="{{ site.baseurl }}/images/icons/mal.png" alt="MyAnimeList" title="MyAnimeList" class="iconSml">
+          </a>
+        {% endif %}
+        {% if page.ann %}
+          <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{ page.ann }}" target="_blank">
+            <img src="{{ site.baseurl }}/images/icons/ann.png" alt="Anime News Network" title="Anime News Network" class="iconSml">
+          </a>
+        {% endif %}
+        {% if page.anidb %}
+          <a href="https://anidb.net/a{{ page.anidb }}" target="_blank">
+            <img src="{{ site.baseurl }}/images/icons/anidb.png" alt="aniDB" title="aniDB" class="iconSml">
+          </a>
+        {% endif %}
+      </div>
+      <!--  END ICON LINKS -->
+    </div>
 
-		<!-- SHOW ALTERNATE TITLES -->
-		{% if page.altTitles %}
-			<div class="smallText">
-				{{ page.altTitles | join: ' - <wbr />' }}
-			</div>
-		{% endif %}
-		<!--  END ALTERNATE TITLES -->
+    <!-- SHOW ALTERNATE TITLES -->
+    {% if page.altTitles %}
+      <div class="smallText">
+        {{ page.altTitles | join: ' - <wbr />' }}
+      </div>
+    {% endif %}
+    <!--  END ALTERNATE TITLES -->
 
-		<!-- SHOW CATS/TAGS -->
-		{% if page.categories %}
-			<div class="smallText">
-				{% for cat in page.categories %}
-					<wbr><a href="{{ site.baseurl}}/cats/{{ cat }}">{{ cat | capitalize }}</a>
-					{% unless forloop.last %} - {% endunless %}
-				{% endfor %}
-			</div>
-		{% endif %}
+    <!-- SHOW CATS/TAGS -->
+    {% if page.categories %}
+      <div class="smallText">
+        {% for cat in page.categories %}
+          <wbr><a href="{{ site.baseurl}}/cats/{{ cat }}">{{ cat | capitalize }}</a>
+          {% unless forloop.last %} - {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
 
-		{% if page.tags %}
-			<div class="smallText">
-				{% for tag in page.tags %}
-					<wbr><a href="{{ site.baseurl}}/tags/{{ tag }}">{{ tag | capitalize }}</a>
-					{% unless forloop.last %} - {% endunless %}
-				{% endfor %}
-			</div>
-		{% endif %}
-		<!--  END CATS/TAGS -->
-	</div>
+    {% if page.tags %}
+      <div class="smallText">
+        {% for tag in page.tags %}
+          <wbr><a href="{{ site.baseurl}}/tags/{{ tag }}">{{ tag | capitalize }}</a>
+          {% unless forloop.last %} - {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <!--  END CATS/TAGS -->
+  </div>
 
-	<!-- SHOW CONTENT -->
-	<div class="entry">
+  <!-- SHOW CONTENT -->
+  <div class="entry">
 
-		<!-- SHOW IMAGES -->
+    <!-- SHOW IMAGES -->
     {% if page.imgDir %}
-			{% assign imgCount = 0 %}
-    	{% assign loopCount = 0 %}
-    	{% assign halfCount = 0 %}
-    	{% assign linkArr = "" | split: "|"  %}
-			{% assign lThumbs = "" %}
-			{% assign rThumbs = "" %}
-			{% assign fullImages = "" %}
+      {% assign imgCount = 0 %}
+      {% assign loopCount = 0 %}
+      {% assign halfCount = 0 %}
+      {% assign linkArr = "" | split: "|"  %}
+      {% assign lThumbs = "" %}
+      {% assign rThumbs = "" %}
+      {% assign fullImages = "" %}
 
       {% for file in site.static_files %}
         {% assign a = file.path | split: page.imgDir | size %}
         {% assign b = file.path | split: "full_images" | size %}
         {% if a > 1 and b == 1 %}
-    			{% assign linkArr = linkArr | push: file.path %}
-      		{% if imgCount >= 9 %}
-      			{% break %}
-      		{% endif %}
-        	{% assign imgCount = imgCount | plus: 1 %}
-      	{% endif %}
+          {% assign linkArr = linkArr | push: file.path %}
+          {% if imgCount >= 9 %}
+            {% break %}
+          {% endif %}
+          {% assign imgCount = imgCount | plus: 1 %}
+        {% endif %}
       {% endfor %}
 
-    	{% assign halfCount = imgCount | divided_by: 2 %}
+      {% assign halfCount = imgCount | divided_by: 2 %}
       {% assign temp = imgCount | modulo: 2 %}
       {% if temp == 0 %}
-      	{% assign halfCount = halfCount | plus: 1 %}
+        {% assign halfCount = halfCount | plus: 1 %}
       {% endif %}
 
       {% for link in linkArr %}
-      	{% if forloop.first %}
-    			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='f" | append: loopCount | append: "' class='galleryImg active'>" %}
-    			{% assign temp = "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='" | append: loopCount | append: "' class='galleryThumb active'>" %}
-				{% else %}
-    			{% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='f" | append: loopCount | append: "' class='galleryImg'>" %}
-    			{% assign temp = "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='" | append: loopCount | append: "' class='galleryThumb'>" %}
-    		{% endif %}
+        {% if forloop.first %}
+          {% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='f" | append: loopCount | append: "' class='galleryImg active'>" %}
+          {% assign temp = "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='" | append: loopCount | append: "' class='galleryThumb active'>" %}
+        {% else %}
+          {% assign fullImages = fullImages | append: "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='f" | append: loopCount | append: "' class='galleryImg'>" %}
+          {% assign temp = "<img src='" | append: site.baseurl | append: link | append: "' alt='" | append: page.title | append: "' id='" | append: loopCount | append: "' class='galleryThumb'>" %}
+        {% endif %}
 
-      	{% if loopCount <= halfCount %}
-      		{% assign lThumbs = lThumbs | append: temp %}
-      	{% else %}
-      		{% assign rThumbs = rThumbs | append: temp %}
-      	{% endif %}
+        {% if loopCount <= halfCount %}
+          {% assign lThumbs = lThumbs | append: temp %}
+        {% else %}
+          {% assign rThumbs = rThumbs | append: temp %}
+        {% endif %}
 
-      	{% assign loopCount = loopCount | plus: 1 %}
+        {% assign loopCount = loopCount | plus: 1 %}
       {% endfor %}
 
-			<div class="centerContainer gallery">
-				<div class="inlineContainer">
-					{{ lThumbs }}
-				</div>
-				<div class="inlineContainer">
-					{{ fullImages }}
-				</div>
-				<div class="inlineContainer">
-					{{ rThumbs }}
-				</div>
-			</div>
-		{% else %}
-			<br/>
-		{% endif %}
-		<!--  END IMAGES -->
+      <div class="centerContainer gallery">
+        <div class="inlineContainer">
+          {{ lThumbs }}
+        </div>
+        <div class="inlineContainer">
+          {{ fullImages }}
+        </div>
+        <div class="inlineContainer">
+          {{ rThumbs }}
+        </div>
+      </div>
+    {% else %}
+      <br/>
+    {% endif %}
+    <!--  END IMAGES -->
 
-		<!-- SHOW CONTENT -->
-		{{ content }}
-		<!--  END CONTENT -->
+    <!-- SHOW CONTENT -->
+    {{ content }}
+    <!--  END CONTENT -->
 
-		<!-- SHOW RECOMMENDATIONS -->
-		{% if page.recs %}
-			If you enjoy {{ page.title }}, try these other series:
-			<ul>
-			{% for rec in page.recs %}
-				<li>
-				{% assign found = false %}
+    <!-- SHOW RECOMMENDATIONS -->
+    {% if page.recs %}
+      If you enjoy {{ page.title }}, try these other series:
+      <ul>
+      {% for rec in page.recs %}
+        <li>
+        {% assign found = false %}
 
-				{% for post in site.posts %}
-					{% if post.title == rec %}
-						{% assign recURL = post.url %}
-						{% assign found = true %}
-						{% break %}
-					{% endif %}
-				{% endfor %}
+        {% for post in site.posts %}
+          {% if post.title == rec %}
+            {% assign recURL = post.url %}
+            {% assign found = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
 
-				{% if found %}
-					<a href="{{ site.baseurl }}{{ recURL }}">{{ rec }}</a>
-				{% else %}
-					{{ rec }}
-				{% endif %}
-				</li>
-			{% endfor %}
-			</ul>
-		{% endif %}
-		<!--  END RECOMMENDATIONS -->
-	</div>
-	<!--  END CONTENT -->
+        {% if found %}
+          <a href="{{ site.baseurl }}{{ recURL }}">{{ rec }}</a>
+        {% else %}
+          {{ rec }}
+        {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    <!--  END RECOMMENDATIONS -->
+  </div>
+  <!--  END CONTENT -->
 </div>
 
 
 <!-- SHOW PREV/NEXT -->
 <div class="emptyContainer">
-	{% for post in site.posts %}
-		{% if nextPost %}
-			{% if nextPost.title == page.title %}
-				<div class="smallContainer leftSide">
-					<a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
-						&larr; <span class="smallText italic">Prev Post</span>
-						<br/>
-						<span class="smallText breakWord">{{ post.title }}</span>
-					</a>
-				</div>
-			{% else if post.title == page.title %}
-				<div class="smallContainer rightSide">
-					<a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
-						<span class="smallText italic">Next Post</span> &rarr;
-						<br/>
-						<span class="smallText breakWord">{{ nextPost.title }}</span>
-					</a>
-				</div>
-			{% endif %}
-		{% endif %}
+  {% for post in site.posts %}
+    {% if nextPost %}
+      {% if nextPost.title == page.title %}
+        <div class="smallContainer leftSide">
+          <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
+            &larr; <span class="smallText italic">Prev Post</span>
+            <br/>
+            <span class="smallText breakWord">{{ post.title }}</span>
+          </a>
+        </div>
+      {% else if post.title == page.title %}
+        <div class="smallContainer rightSide">
+          <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
+            <span class="smallText italic">Next Post</span> &rarr;
+            <br/>
+            <span class="smallText breakWord">{{ nextPost.title }}</span>
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
 
-		{% assign nextPost = post %}
-	{% endfor %}
+    {% assign nextPost = post %}
+  {% endfor %}
 </div>
 <!--  END PREV/NEXT -->
 
 
 <!-- SHOW COMMENTS -->
 <div class="container">
-	{% include disqus.html %}
+  {% include disqus.html %}
 </div>
 <!--  END COMMENTS -->

@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	background-color: $purple;
+  background-color: $purple;
   background-image: url(images/groovin_magic.png);
   background-size: 100%;
   background-position: left top;
@@ -102,7 +102,7 @@ p {
 a {
   color: $linkColor;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
     color: $hoverColor;
   }
