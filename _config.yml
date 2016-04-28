@@ -17,7 +17,7 @@ footer-links:
   instagram:
   linkedin:
   pinterest:
-  rss: rss # just type anything here for a working RSS icon
+  rss: # just type anything here for a working RSS icon
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
@@ -27,7 +27,7 @@ footer-links:
 disqus: notatrueroute
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-77088508-1
 
 
 # If you're hosting your site at a Project repository on GitHub pages
