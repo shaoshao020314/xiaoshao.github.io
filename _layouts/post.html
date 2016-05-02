@@ -200,10 +200,11 @@ comments: true
           <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
             &larr; <span class="smallText italic">Prev Post</span>
             <br/>
+            {{ nextPost.title }}
             <span class="smallText breakWord">{{ post.title }}</span>
           </a>
         </div>
-      {% else if post.title == page.title %}
+      {% elsif post.title == page.title %}
         <div class="smallContainer rightSide">
           <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
             <span class="smallText italic">Next Post</span> &rarr;
