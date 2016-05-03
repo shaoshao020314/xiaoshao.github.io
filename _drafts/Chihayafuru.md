@@ -10,6 +10,7 @@ imgDir: chihayafuru
 
 categories:
 - anime
+- manga
 - review
 tags:
 - competition
@@ -35,6 +36,8 @@ One of my few real complaints about Chihayafuru might be that it presents a very
 
 // Characters
 
+// Conclusion
+
 #### Season 2
 
 With the second season of the anime, our main characters have moved into their second year of highschool, and they manage to scrape together a few new first-year recruits to the karuta club.
@@ -50,4 +53,6 @@ The original five players are still improving, of course, but they seem largely 
 
 #### Manga
 
-// Conclusion
+// CRAWLING IN MY SKIN
+
+// Third-year

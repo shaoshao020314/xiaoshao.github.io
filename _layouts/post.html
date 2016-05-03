@@ -162,7 +162,7 @@ comments: true
 
     <!-- SHOW RECOMMENDATIONS -->
     {% if page.recs %}
-      If you enjoy {{ page.title }}, try these other series:
+      If you enjoy <span class="italic">{{ page.title }}</span>, try these other series:
       <ul>
       {% for rec in page.recs %}
         <li>
@@ -198,17 +198,17 @@ comments: true
       {% if nextPost.title == page.title %}
         <div class="smallContainer leftSide">
           <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
-            &larr; <span class="smallText italic">Prev Post</span>
+            &larr; <span class="smallText">Prev Post</span>
             <br/>
-            <span class="smallText breakWord">{{ post.title }}</span>
+            <span class="italic breakWord">{{ post.title }}</span>
           </a>
         </div>
       {% elsif post.title == page.title %}
         <div class="smallContainer rightSide">
           <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
-            <span class="smallText italic">Next Post</span> &rarr;
+            <span class="smallText">Next Post</span> &rarr;
             <br/>
-            <span class="smallText breakWord">{{ nextPost.title }}</span>
+            <span class="italic breakWord">{{ nextPost.title }}</span>
           </a>
         </div>
       {% endif %}
