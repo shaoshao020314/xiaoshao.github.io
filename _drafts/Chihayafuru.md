@@ -13,6 +13,7 @@ categories:
 - manga
 - review
 tags:
+- 3+ cour
 - competition
 - drama
 - long arc

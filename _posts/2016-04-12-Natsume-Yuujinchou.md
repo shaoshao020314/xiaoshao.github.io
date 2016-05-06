@@ -13,6 +13,7 @@ categories:
 - manga
 - review
 tags:
+- 3+ cour
 - fantasy
 - drama
 - slice of life
