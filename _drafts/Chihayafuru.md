@@ -19,6 +19,7 @@ tags:
 - teenagers
 - characterization
 - cheerful
+- somber
 - optimistic
 altTitles:
 - Chihayafull
