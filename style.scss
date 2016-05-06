@@ -242,17 +242,18 @@ nav {
     float: none;
     margin-top: 9px;
     display: block;
-    font-size: 16px;
   }
 
   .bl {
-    padding-left: 3px;
+    padding: 0 3px;
     border-left: 5px $lineColor solid;
     margin-bottom: 8px;
 
     @include mobile {
       display: inline-block;
       margin: 0 10px;
+      border-bottom: 5px $lineColor solid;
+      border-left: none;
     }
   }
 

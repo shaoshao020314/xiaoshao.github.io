@@ -162,6 +162,8 @@ comments: true
 
     <!-- SHOW RECOMMENDATIONS -->
     {% if page.recs %}
+      <div style="border-bottom: 1px solid #ccc"></div>
+
       If you enjoy <span class="italic">{{ page.title }}</span>, try these other series:
       <ul>
       {% for rec in page.recs %}
