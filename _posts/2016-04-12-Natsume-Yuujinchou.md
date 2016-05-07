@@ -72,7 +72,7 @@ It's certainly not for everyone, because it *is* on the slower side, and some of
 The anime is quite a faithful adaptation of the manga, so if you enjoy the anime, you're sure to like the manga for the same reasons, or vice versa.
 Unfortunately, the manga doesn't have a soundtrack, voice acting, or color, and the artstyle is fairly different, and I think for that, the manga lacks some of the atmospheric immersion the anime has, but then, the same can be said for most manga that get adaptations.
 Also, because the manga chapters and anime episodes have different lengths, certain stories work better in one medium than the other, as a result of differing pacing and amount of content, so it might be worth your time to both read and watch *Natsume Yuujinchou*.
-Additionally, there's still a lot of material that the anime has yet to cover, even after four seasons (and a fifth in the works).
+Additionally, there's still a lot of material that the anime has yet to cover, even after four seasons (and a fifth in the works), and with that much additional content, Natsume's character is given that much more room to grow.
 Even though the manga feels a little more raw and unpolished than the anime, the stories are still lovely and absolutely worth checking out.
 
 #### Hotarubi no Mori e
