@@ -399,8 +399,8 @@ footer {
   }
 }
 
-a * {
-  &:hover, &:active {
+a {
+  &:hover, &:hover *, &:active, &:active * {
     border-color: $hoverColor !important;
   }
 }
