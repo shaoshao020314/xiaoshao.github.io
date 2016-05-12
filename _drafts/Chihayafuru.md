@@ -14,9 +14,9 @@ categories:
 - review
 tags:
 - 3+ cour
+- long arc
 - competition
 - drama
-- long arc
 - teenagers
 - characterization
 - cheerful

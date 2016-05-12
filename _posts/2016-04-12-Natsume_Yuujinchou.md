@@ -14,10 +14,10 @@ categories:
 - review
 tags:
 - 3+ cour
+- episodic
 - fantasy
 - drama
 - slice of life
-- episodic
 - teenagers
 - atmosphere
 - characterization
@@ -37,6 +37,7 @@ recs:
 - Mushishi
 - Non Non Biyori
 - Otome Youkai Zakuro
+- Sora no Woto
 - Tamayura
 ---
 
