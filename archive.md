@@ -10,10 +10,8 @@ permalink: /archive/
       $(".filterButton").removeClass("active");
       $(".group").removeClass("active");
 
-      var gId = "#" + this.id + "Group";
-
       $(this).addClass("active");
-      $(gId).addClass("active");
+      $("#" + this.id + "Group").addClass("active");
     });
   });
 </script>
@@ -71,7 +69,7 @@ permalink: /archive/
     {% assign cats = cats | split: "," | sort %}
     {% for cat in cats %}
       {% assign temp = cat | split: '^' %}
-      {% assign catName = temp | first %}
+      {% assign catName = temp | first | strip %}
       {% assign catSize = temp | last %}
       <tr class="hoverLink">
         <td><a href="{{ site.baseurl }}/cats/{{ catName }}">{{ catSize }} - {{ catName }}</a></td>
@@ -86,7 +84,7 @@ permalink: /archive/
     {% assign tags = tags | split: "," | sort %}
     {% for tag in tags %}
       {% assign temp = tag | split: '^' %}
-      {% assign tagName = temp | first %}
+      {% assign tagName = temp | first | strip %}
       {% assign tagSize = temp | last %}
       <tr class="hoverLink">
         <td><a href="{{ site.baseurl }}/tags/{{ tagName }}">{{ tagSize }} - {{ tagName }}</a></td>
