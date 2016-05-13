@@ -12,22 +12,26 @@ comments: true
       $(".galleryImg").removeClass("active");
 
       var newNum = (parseInt(this.id.slice(1)) + 1) % numImgs;
-
-      var fId = '#f' + newNum;
-      var tId = '#'  + newNum;
-
-      $(tId).addClass("active");
-      $(fId).addClass("active");
+      $('#'  + newNum).addClass("active");
+      $('#f' + newNum).addClass("active");
     });
 
     $(".galleryThumb").click(function() {
       $(".galleryThumb").removeClass("active");
       $(".galleryImg").removeClass("active");
 
-      var fId = '#f' + this.id;
       $(this).addClass("active");
-      $(fId).addClass("active");
+      $('#f' + this.id).addClass("active");
     });
+
+    $(".blockLink").hover(function() {
+      $(this).find(".animLeft").stop().animate({  left: -50 }, 'fast');
+      $(this).find(".animRight").stop().animate({ left: 50 }, 'fast');
+    }, function() {
+      $(this).find(".animLeft").stop().animate({  left: 0 }, 'fast');
+      $(this).find(".animRight").stop().animate({ left: 0 }, 'fast');
+    });
+
   });
 </script>
 
@@ -200,17 +204,21 @@ comments: true
       {% if nextPost.title == page.title %}
         <div class="smallContainer leftSide">
           <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
-            &larr; <span class="smallText">Prev Post</span>
-            <br/>
-            <span class="italic breakWord">{{ post.title }}</span>
+            <div class="animLeft">
+              &larr; <span class="smallText">Prev Post</span>
+              <br/>
+              <span class="italic breakWord">{{ post.title }}</span>
+            </div>
           </a>
         </div>
       {% elsif post.title == page.title %}
         <div class="smallContainer rightSide">
           <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
-            <span class="smallText">Next Post</span> &rarr;
-            <br/>
-            <span class="italic breakWord">{{ nextPost.title }}</span>
+            <div class="animRight">
+              <span class="smallText">Next Post</span> &rarr;
+              <br/>
+              <span class="italic breakWord">{{ nextPost.title }}</span>
+            </div>
           </a>
         </div>
       {% endif %}

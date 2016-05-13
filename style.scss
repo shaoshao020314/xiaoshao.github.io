@@ -48,7 +48,14 @@ body {
 
 .blockLink {
   display: block;
-  padding: 10px;
+  padding: 10px 15px;
+}
+
+.animLeft, .animRight {
+  position: relative;
+  top: 0;
+  left:0;
+  display:inline-block;
 }
 
 .italic {
@@ -57,12 +64,12 @@ body {
 
 .leftSide {
   float: left;
-  text-align: left;
+  text-align: center;
 }
 
 .rightSide {
   float: right;
-  text-align: right;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
