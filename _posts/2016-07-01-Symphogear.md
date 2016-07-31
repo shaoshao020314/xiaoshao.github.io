@@ -12,7 +12,7 @@ categories:
 - anime review
 tags:
 - 3+ cour
-- long arc
+- short arc
 - action
 - drama
 - teenagers
