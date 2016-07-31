@@ -9,9 +9,8 @@ ann:    9419
 imgDir: natsume_yuujinchou
 
 categories:
-- anime
-- manga
-- review
+- anime review
+- manga review
 tags:
 - 3+ cour
 - episodic

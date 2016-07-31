@@ -9,9 +9,8 @@ ann:    12991
 imgDir: chihayafuru
 
 categories:
-- anime
-- manga
-- review
+- anime review
+- manga review
 tags:
 - 3+ cour
 - long arc

@@ -9,8 +9,7 @@ ann:    12727
 imgDir: kimi_to_boku
 
 categories:
-- anime
-- review
+- anime review
 tags:
 - 2 cour
 - episodic

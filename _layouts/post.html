@@ -192,6 +192,24 @@ comments: true
       </ul>
     {% endif %}
     <!--  END RECOMMENDATIONS -->
+
+    <!-- SHOW BLOGPOST SERIES -->
+    {% if page.series %}
+      <div style="border-bottom: 1px solid #ccc"></div>
+      Other blogposts about {{ page.series }}:
+      <ul>
+      {% for post in site.posts %}
+        <li>
+        {% if post.series %}
+          {% if post.series == page.series %}
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          {% endif %}
+        {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    <!--  END BLOGPOST SERIES -->
   </div>
   <!--  END CONTENT -->
 </div>
