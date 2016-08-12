@@ -213,7 +213,7 @@ img {
   }
 }
 
-.site-info {
+#site-info {
   float: left;
 
   @include mobile {
@@ -223,19 +223,40 @@ img {
   }
 }
 
-h1.site-name {
+h1#site-name {
   color: $darkGray;
   font-weight: 300;
-  letter-spacing: 0.5px
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
+  letter-spacing: 0.5px;
+  float: left;
 
   @include mobile {
+    float: none;
     margin: 3px 0;
+  }
+}
+
+#site-description {
+  margin: 8px;
+  color: $gray;
+  font-size: 16px;
+  float: left;
+
+  @include mobile {
+    float: none;
+    margin: 3px 0;
+  }
+}
+
+#motd {
+  margin: 5px 0 0 0;
+  color: $purple;
+  font-size: 13px;
+  clear: left;
+  cursor: pointer;
+  letter-spacing: .5px;
+
+  @include mobile {
+    display: none;
   }
 }
 

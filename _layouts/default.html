@@ -14,6 +14,7 @@
     <!-- <link rel="alternate" type="application/rss+xml"  title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" /> -->
     <!-- <link rel="alternate" type="application/atom+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/atom.xml" /> -->
     <script src="{{ site.baseurl }}/js/jquery-2.2.3.min.js"></script>
+    <script src="{{ site.baseurl }}/js/motdSelector.js"></script>
     
     <!-- SHOW ANALYTICS -->
     {% include analytics.html %}
@@ -28,9 +29,14 @@
         <header class="masthead clearfix">
           <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a> -->
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">
+          <nav>
+            <div class="bl"><a class="hoverLink" href="{{ site.baseurl }}/about">About</a></div>
+            <div class="bl"><a class="hoverLink" href="{{ site.baseurl }}/archive">Archive</a></div>
+          </nav>
+
+          <div id="site-info">
+            <h1 id="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p id="site-description">
               <!-- {{ site.description }} -->
               
               {% if site.footer-links.myanimelist %}
@@ -52,12 +58,11 @@
                 <img src="{{ site.baseurl }}/images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="iconLrg">
               </a>
             </p>
+
+            <p id="motd" onclick="setMotd();">
+            </p>
           </div>
 
-          <nav>
-            <div class="bl"><a class="hoverLink" href="{{ site.baseurl }}/about">About</a></div>
-            <div class="bl"><a class="hoverLink" href="{{ site.baseurl }}/archive">Archive</a></div>
-          </nav>
         </header>
       </div>
     </div>
