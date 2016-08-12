@@ -1,6 +1,5 @@
 module Jekyll
-
-	class TsGenerator < Generator
+	class JsGenerator < Generator
 		safe true
 		priority :low
 
@@ -8,17 +7,12 @@ module Jekyll
 			src = "lines.txt"
 			dst = "motdSelector.js"
 
-			ts_files = Array.new;
-
-			ts_files << TsFile.new(site, site.source, "js", src, dst)
-
-			# concat new tsfiles with static files
-			site.static_files.concat(ts_files)
+			# add new file to the list of static files
+			site.static_files.push(JsFile.new(site, site.source, "js", src, dst))
 		end
 	end
 
-
-	class TsFile < StaticFile
+	class JsFile < StaticFile
 		def initialize(site, base, dir, name, dst)
 			super(site, base, dir, name, nil)
 

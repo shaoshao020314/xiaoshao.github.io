@@ -28,14 +28,14 @@ recs:
 - Tenga Toppa Gurren Lagann
 ---
 
-"Interdimensional monsters are attacking, and they can only be stopped by highschool girls in battle armor that's powered by singing!"
-*Senki Zesshou Symphogear* is a balls-to-the-wall action series that takes over-the-top cheesiness to its absolute limits.
+"Interdimensional monsters are attacking, and they can only be stopped by highschool girls in music-powered battle armor!"
+*Senki Zesshou Symphogear* is a balls-to-the-wall action series that combines the over-the-top cheesiness of mahou shoujo and tokusatsu to their absolute limits.
 
 *Symphogear* is about facing your inner demons, trusting your friends, yada-yada-yada, and most importantly, punching the crap out of bad guys.
 Whether they're mowing down alien blobs or fighting other "gear" users, the characters in *Symphogear* know how to put on a show.
 All of the action in *Symphogear* can be summed up with three questions: "Is it cool?", "Is it maybe just stupid enough to work?", and "Okay, but can we make it bigger?"
 
-Even when we take a break from the weird stupidity that passes for fighting, *Symphogear* continues to entertain with its sense of humor.
+Even when we take a break from the stupid (but cool) action scenes, *Symphogear* continues to entertain with its sense of humor.
 There are various small gags throughout the series, but usually, the humor comes from the main character, Hibiki, and her voice actress, Yuuki Aoi, who really shines when portraying such a goofy girl.
 
 Unfortunately, the world of *Symphogear* isn't all sunshine and rainbows: everyone gets a turn in the melodrama hotseat, and it's not spectacularly well-written.
@@ -69,6 +69,6 @@ On top of that, the plot also moves way too fast: characters are gaining powers,
 The anime staff realized after Season 2 that it was bogged down by too many storylines with the inclusion of enemy gear users, so in Season 3, we have a single main villain with robotic doll minions, so we get to meet a bunch of new, badass enemies, but we can just concentrate on the main villain's storyline.
 In addition, the pacing seemed to have returned to Season 1 levels of hype, switching between drama and action in good stride.
 
-However, somewhere in the middle, the season just fizzled out for me.
+However, somewhere in the middle, the season just fizzled out.
 The character subplots were boring, and a lot of them felt like retreading old ground, especially Hibiki's, which is carried over from Season 2 and extended for far too long; even the main plot started to feel like a drag, to the point that the action was almost a chore to sit through.
 I really wish Season 3 had been able to keep up until the end, but still, the first half really felt like a true successor to Season 1 in a way Season 2 never did, and that gives me real hope for the future, since Seasons 4 *and 5* have been announced!
