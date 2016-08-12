@@ -316,6 +316,11 @@ footer {
 /* MINE */
 /********/
 
+a.noLink {
+  color: inherit !important;
+  cursor: text;
+}
+
 .smallText {
   font-size: 12px;
 }

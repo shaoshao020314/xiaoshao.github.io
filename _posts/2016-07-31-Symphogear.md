@@ -56,14 +56,14 @@ Still, at least personally, that's not nearly enough to kill my enjoyment of the
 In summary, the writing is ridiculous, the characters are balls of angst, and the animation cuts corners, but Symphogear is just too busy kicking ass to care.
 The pacing, humor, and sheer absurdity of the series will keep you laughing in amazement and begging for more.
 
-#### Season 2
+{% anchoredHeader Season 2 %}
 
 I was really excited when *Symphogear G* started airing, but it quickly devolved into a nonsensical mess.
 Now look, *Symphogear* is crazy and stupid by definition, yes, but I never thought of Season 1 as convoluted; it was straightforward and did exactly what it needed, when it needed.
 Whereas Season 1 was able to take its time with each character's drama, Season 2 introduces several new characters, and every seems to have their own thing going on, so all of the subplots come out feeling rushed and incomplete.
 On top of that, the plot also moves way too fast: characters are gaining powers, losing powers, and switching sides every episode, so everything feels inconsequential and forgettable.
 
-#### Season 3
+{% anchoredHeader Season 3 %}
 
 *Symphogear GX* started out feeling like Season 1, but in the end, left me with the same bitter aftertaste as Season 2.
 The anime staff realized after Season 2 that it was bogged down by too many storylines with the inclusion of enemy gear users, so in Season 3, we have a single main villain with robotic doll minions, so we get to meet a bunch of new, badass enemies, but we can just concentrate on the main villain's storyline.

@@ -67,7 +67,7 @@ Blending these qualities together, the show feels laidback and comfortable, and 
 
 It's certainly not for everyone, because it *is* on the slower side, and some of the episodes don't stand up well on their own, but that's the worst I can say, because overall, *Natsume Yuujinchou* is a beautiful series that's definitely worth a watch if you enjoy world-building, slice-of-life, and coming-of-age stories.
 
-#### Manga
+{% anchoredHeader Manga %}
 
 The anime is quite a faithful adaptation of the manga, so if you enjoy the anime, you're sure to like the manga for the same reasons, or vice versa.
 Unfortunately, the manga doesn't have a soundtrack, voice acting, or color, and the artstyle is fairly different, and I think for that, the manga lacks some of the atmospheric immersion the anime has, but then, the same can be said for most manga that get adaptations.
@@ -75,7 +75,7 @@ Also, because the manga chapters and anime episodes have different lengths, cert
 Additionally, there's still a lot of material that the anime has yet to cover, even after four seasons (and a fifth in the works), and with that much additional content, Natsume's character is given that much more room to grow.
 Even though the manga feels a little more raw and unpolished than the anime, the stories are still lovely and absolutely worth checking out.
 
-#### Hotarubi no Mori e
+{% anchoredHeader Hotarubi no Mori e %}
 
 Both a manga oneshot and an anime OVA by the same author (and anime studio), *Hotarubi no Mori e* doesn't have any in-universe connection to *Natsume Yuujinchou*.
 However, it could be called a spiritual side-story, because it shares the same production style/quality, and it handles both romance and Japanese folklore in much the same way that *Natsume Yuujinchou* does.
