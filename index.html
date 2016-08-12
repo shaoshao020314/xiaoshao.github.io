@@ -18,12 +18,12 @@ layout: default
         <a href="{{ site.baseurl }}{{ post.url }}" class="hoverLink">
           <div class="postDate">{{ post.date | date: "%Y.%m.%d" }}</div>
           <div class="postTitle">{{ post.title }}</div>
-
           <div class="entry">
             {% if post.imgDir %}
               {% for file in site.static_files %}
                 {% assign a = file.path | split: post.imgDir | size %}
-                {% if a > 1 %}
+                {% assign b = file.path | split: "standard" | size %}
+                {% if a > 1 and b > 1 %}
                   <img src="{{ site.baseurl }}{{ file.path }}" alt="{{ post.title }}" class="regularImg">
                   {% break %}
                 {% endif %}

@@ -110,8 +110,8 @@ comments: true
 
       {% for file in site.static_files %}
         {% assign a = file.path | split: page.imgDir | size %}
-        {% assign b = file.path | split: "full_images" | size %}
-        {% if a > 1 and b == 1 %}
+        {% assign b = file.path | split: "standard" | size %}
+        {% if a > 1 and b > 1 %}
           {% assign linkArr = linkArr | push: file.path %}
           {% if imgCount >= 9 %}
             {% break %}
@@ -220,9 +220,22 @@ comments: true
   {% for post in site.posts %}
     {% if nextPost %}
       {% if nextPost.title == page.title %}
-        <div class="smallContainer leftSide">
-          <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
-            <div class="animLeft">
+        {% if post.imgDir %}
+          {% for file in site.static_files %}
+            {% assign a = file.path | split: post.imgDir | size %}
+            {% assign b = file.path | split: "nav" | size %}
+            {% if a > 1 and b > 1 %}
+              <div class="smallContainer leftSide" style="background-image: url('{{ site.baseurl }}{{ file.path }}')">
+                <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
+                  <div class="animLeft highlightText">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <div class="smallContainer leftSide">
+            <a class="blockLink" href="{{ site.baseurl }}{{ post.url }}">
+              <div class="animLeft">
+        {% endif %}
               &larr; <span class="smallText">Prev Post</span>
               <br/>
               <span class="italic breakWord">{{ post.title }}</span>
@@ -230,9 +243,22 @@ comments: true
           </a>
         </div>
       {% elsif post.title == page.title %}
-        <div class="smallContainer rightSide">
-          <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
-            <div class="animRight">
+        {% if nextPost.imgDir %}
+          {% for file in site.static_files %}
+            {% assign a = file.path | split: nextPost.imgDir | size %}
+            {% assign b = file.path | split: "nav" | size %}
+            {% if a > 1 and b > 1 %}
+              <div class="smallContainer rightSide" style="background-image: url('{{ site.baseurl }}{{ file.path }}')">
+                <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
+                  <div class="animRight highlightText">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <div class="smallContainer rightSide">
+            <a class="blockLink" href="{{ site.baseurl }}{{ nextPost.url }}">
+              <div class="animRight">
+        {% endif %}
               <span class="smallText">Next Post</span> &rarr;
               <br/>
               <span class="italic breakWord">{{ nextPost.title }}</span>

@@ -325,6 +325,11 @@ a.noLink {
   font-size: 12px;
 }
 
+.highlightText {
+  color: $white;
+  text-shadow: -1px -1px 0 $purple, 1px -1px 0 $purple, -1px 1px 0 $purple, 1px 1px 0 $purple;
+}
+
 .breakWord {
   word-wrap: break-word;
 }
