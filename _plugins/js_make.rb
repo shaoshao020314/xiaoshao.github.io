@@ -4,11 +4,11 @@ module Jekyll
 		priority :low
 
 		def generate(site)
-			src = "lines.txt"
-			dst = "motdSelector.js"
+			src = "_plugins/resources/lines.txt"
+			dst = "js/motdSelector.js"
 
 			# add new file to the list of static files
-			site.static_files.push(JsFile.new(site, site.source, "js", src, dst))
+			site.static_files.push(JsFile.new(site, site.source, "", src, dst))
 		end
 	end
 
@@ -16,7 +16,7 @@ module Jekyll
 		def initialize(site, base, dir, name, dst)
 			super(site, base, dir, name, nil)
 
-			@srcName = File.join(base, dir, name)
+			@srcName = File.join(base, name)
 			@dir = dir
 			@dst = dst
 		end
@@ -35,7 +35,7 @@ module Jekyll
 
 			txt = File.open(@srcName, 'r')
 			txt.readlines.each do |line|
-				js.puts "\tquoteArr.push('&#12300; " + line.strip + " &#12301;');"
+				js.puts "\tquoteArr.push('" + line.strip + "');"
 			end
 			txt.close
 
@@ -44,7 +44,7 @@ module Jekyll
 
 			js.puts "function setMotd() {"
 			js.puts "\tvar index = Math.floor((Math.random() * quoteArr.length));"
-			js.puts "\t$('#motd').html(quoteArr[index]);"
+			js.puts "\t$('#motd').html('&#12300; ' + quoteArr[index] + ' &#12301;');"
 			js.puts "}"
 
 			js.close

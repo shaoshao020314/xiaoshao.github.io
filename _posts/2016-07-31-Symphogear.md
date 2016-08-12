@@ -29,7 +29,7 @@ recs:
 ---
 
 "Interdimensional monsters are attacking, and they can only be stopped by highschool girls in music-powered battle armor!"
-*Senki Zesshou Symphogear* is a balls-to-the-wall action series that combines the over-the-top cheesiness of mahou shoujo and tokusatsu to their absolute limits.
+*Senki Zesshou Symphogear* is a balls-to-the-wall action series that takes the over-the-top cheesiness of mahou shoujo and tokusatsu to their absolute limits.
 
 *Symphogear* is about facing your inner demons, trusting your friends, yada-yada-yada, and most importantly, punching the crap out of bad guys.
 Whether they're mowing down alien blobs or fighting other "gear" users, the characters in *Symphogear* know how to put on a show.
