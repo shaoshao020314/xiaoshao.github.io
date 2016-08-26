@@ -4,7 +4,8 @@ title: About
 permalink: /about/
 ---
 
-There's an endless ocean of children's cartoons just waiting to be discovered, and I hope my thoughts help you navigate the high seas.
+I like writing about stuff I like.  
+There's an endless ocean of children's cartoons out there for you to discover, and I hope my thoughts help you navigate the high seas.
 
 #### Other Neat People
 

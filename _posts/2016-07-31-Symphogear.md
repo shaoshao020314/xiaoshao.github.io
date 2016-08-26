@@ -17,6 +17,7 @@ tags:
 - drama
 - teenagers
 - hotblooded
+- optimistic
 altTitles:
 - 戦姫絶唱シンフォギア
 recs:
