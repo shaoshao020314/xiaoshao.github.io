@@ -4,19 +4,21 @@ module Jekyll
 		priority :low
 
 		def generate(site)
-			src = "_plugins/resources/lines.txt"
-			dst = "js/motdSelector.js"
+			motd  = "_plugins/resources/motd.txt"
+			title = "_plugins/resources/title.txt"
+			dst   = "js/motdSelector.js"
 
 			# add new file to the list of static files
-			site.static_files.push(JsFile.new(site, site.source, "", src, dst))
+			site.static_files.push(JsFile.new(site, site.source, "", motd, title, dst))
 		end
 	end
 
 	class JsFile < StaticFile
-		def initialize(site, base, dir, name, dst)
-			super(site, base, dir, name, nil)
+		def initialize(site, base, dir, motd, title, dst)
+			super(site, base, dir, motd, nil)
 
-			@srcName = File.join(base, name)
+			@srcMotd = File.join(base, motd)
+			@srcTitle = File.join(base, title)
 			@dir = dir
 			@dst = dst
 		end
@@ -30,21 +32,34 @@ module Jekyll
 
 			js = File.open(dstName, 'w')
 
-			js.puts "var quoteArr = [];"
+			js.puts "var motdArr = [];"
+			js.puts "var titleArr = [];"
 			js.puts "$(function() {"
 
-			txt = File.open(@srcName, 'r')
+			txt = File.open(@srcMotd, 'r')
 			txt.readlines.each do |line|
-				js.puts "\tquoteArr.push('" + line.strip + "');"
+				js.puts "\tmotdArr.push('" + line.strip.gsub("'", "\\\\'") + "');"
+			end
+			txt.close
+
+			txt = File.open(@srcTitle, 'r')
+			txt.readlines.each do |line|
+				js.puts "\ttitleArr.push('" + line.strip.gsub("'", "\\\\'") + "');"
 			end
 			txt.close
 
 			js.puts "\tsetMotd();"
+			js.puts "\tsetTitle();"
 			js.puts "});"
 
 			js.puts "function setMotd() {"
-			js.puts "\tvar index = Math.floor((Math.random() * quoteArr.length));"
-			js.puts "\t$('#motd').html('&#12300; ' + quoteArr[index] + ' &#12301;');"
+			js.puts "\tvar index = Math.floor((Math.random() * motdArr.length));"
+			js.puts "\t$('#motd').html('&#12300; ' + motdArr[index] + ' &#12301;');"
+			js.puts "}"
+
+			js.puts "function setTitle() {"
+			js.puts "\tvar index = Math.floor((Math.random() * titleArr.length));"
+			js.puts "\tdocument.title = document.title + ' - ' + titleArr[index];"
 			js.puts "}"
 
 			js.close
